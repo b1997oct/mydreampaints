@@ -1,0 +1,51 @@
+footer {
+	background: #101010;
+	padding: 50px 0;
+}
+.single-box p {
+	color: #fff;
+	line-height: 1.9;
+}
+
+.single-box h2 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.socials {
+	display: flex;
+}
+.fa-icons {
+	margin: 1rem;
+	transform: scale(2);
+	transition: all .2s;
+}
+.send-btn {
+	border: 1.5px solid #fff;
+	background-color: #101010;
+	color: white;
+}
+
+.send-btn:hover {
+	transform: scale(1.05);
+	color: aquamarine;
+	border-bottom:1px solid white;
+	border-top:1px solid white;
+}
+
+.fa-icons:hover {
+	transform: scale(2.3);
+}
+
+
+@media (max-width: 767px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
