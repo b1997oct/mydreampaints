@@ -8,10 +8,11 @@ function Contact() {
   const [helpOpen, setHelpOpen] = useState(false);
   return (
     <div className="contact-div">
+      <div className="sm:max-w-[35rem] sm:m-auto sm:border-r sm:border-l border-gray-800">
       <div className="hr-line"></div>
       <div className="about-div">
         <div className="cc-div">
-          <h6 className="title">About Us</h6>
+          <h6 className="title text-lg">About Us</h6>
           <FaChevronDown
             className={aboutOpen?"chevron1":"chevron2"}
             onClick={() => setAboutOpen(!aboutOpen)}
@@ -21,7 +22,7 @@ function Contact() {
           </FaChevronDown>
         </div>
         <Collapse in={aboutOpen}>
-          <div id="example-collapse-text">
+          <div className="text-justify">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
             labore wes anderson cred nesciunt sapiente ea proident.
@@ -31,7 +32,7 @@ function Contact() {
       <div className="hr-line"></div>
       <div className="help-div">
         <div className="cc-div">
-          <h6 className="title">Help</h6>
+          <h6 className="title text-lg">Help</h6>
           <FaChevronDown
             className={helpOpen?"chevron1":"chevron2"}
             onClick={() => setHelpOpen(!helpOpen)}
@@ -41,7 +42,7 @@ function Contact() {
           </FaChevronDown>
         </div>
         <Collapse in={helpOpen}>
-          <div id="example-collapse-text">
+          <div id="example-collapse-text" className="text-justify">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
             labore wes anderson cred nesciunt sapiente ea proident.
@@ -49,6 +50,7 @@ function Contact() {
         </Collapse>
       </div>
       <div className="hr-line"></div>
+      </div>
       <div className="form-div">
         <h4
          className="m-2 ,flex,justify-start">My dream paint pvt ltd</h4>
@@ -62,7 +64,7 @@ function Contact() {
 
       </div>
       <div className="hr-line"></div>
-
+      
     </div>
   )
 }

@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom'
 import "./header.css"
-import { Squash as Hamburger } from 'hamburger-react'
+import { Squeeze as Hamburger } from 'hamburger-react'
+import logo from "../Assets/logo.png"
 import React, { useState } from 'react'
-import { FaSearch } from "react-icons/fa"
+import { FaHome, FaList, FaPaintRoller, FaPhone, FaSearch, FaTools, FaWarehouse } from "react-icons/fa"
 import { useEffect } from 'react'
 
 export default function Header() {
@@ -12,46 +13,53 @@ export default function Header() {
 
     // Hamburger toggle
 
-   const navFun = ()=>{
+    const navFun = () => {
         setOpen(false)
     }
 
     // nav delay
-    useEffect(()=>{
-        if(isOpen) {
+    useEffect(() => {
+        if (isOpen) {
             setDisplay(true)
-          } else {
-    setTimeout(()=>{
-            setDisplay(false)
-    },300)}
-},[isOpen,display])
+        } else {
+            setTimeout(() => {
+                setDisplay(false)
+            }, 300)
+        }
+    }, [isOpen, display])
 
     // search input
 
     return (
-        <div className='header-div'>
-            <div className='line'></div>
-            <div style={{ display:"flex", flexWrap: "wrap", flex: "1", position: "relative", zIndex: 9, backgroundColor: "white", height: "2.5rem" }}>
-                {/* <img src={lo} alt="LOGO" /> */}<h1 className='LOGO' style={{display:search?"none":""}}>My Dream Paint</h1>
+        <>
+            <div className='header-div bg-white'>
+                <div className='line'></div>
+                <div className='flex'>
+                    <div className="flex flex-1 m-auto relative z-10 bg-white w-[100%] h-[2.5rem] " >
+                        <div className='md:flex-1 m-auto'>
+                            <div className='flex ml-12 gap-3 md:gap-4'>
+                                <div className='h-10 w-10 '>
+                                    <img src={logo} alt="logo" className="mt-1 scale-[2] md:scale-[2.6]" />
+                                </div>
+                                <h className="whitespace-nowrap my-auto md:ml-2 font-semibold">My Dream Paint</h>
+                            </div>
+                        </div>
+                    </div>
 
-                 <input type="text" className="searchInput" style={{display:search?"block":""}} placeholder='Search...' />
-
-                <FaSearch className='fa-search'onClick={()=>setSearch(!search)} />
-                
+                    <div className='hamburger' >
+                        <Hamburger toggled={isOpen} toggle={setOpen} />
+                    </div>
+                    <div className={isOpen ? 'nav-div' : 'nav-div back-anime'} style={{ display: display ? "flex" : null }}>
+                        <ul className='navbar md:m-2' onClick={navFun}>
+                            <NavLink to="/home" ><li className='flex gap-1 items-baseline'><FaHome />Home</li></NavLink>
+                            <NavLink to='/products'><li className='flex gap-1 items-baseline' ><FaList />PRODUCTS</li></NavLink>
+                            <NavLink to='/tools'><li className='flex gap-1 items-baseline' ><FaPaintRoller />TOOLS</li></NavLink>
+                            <NavLink to='/services'><li className='flex gap-1 items-baseline' ><FaTools />SERVICES</li></NavLink>
+                            <NavLink to='/contact'><li className='flex gap-1 items-baseline'><FaPhone />CONTACT US</li></NavLink>
+                        </ul>
+                    </div></div>
+                <div className='line'></div>
             </div>
-            <div className='line'></div>
-            <div className='hamburger' >
-                <Hamburger toggled={isOpen} toggle={setOpen} />
-            </div>
-            <div className={isOpen?'nav-div':'nav-div back-anime'} style={{display:display ?"flex":null }}>
-                <ul className='navbar' onClick={navFun}>
-                    <NavLink to="/home" ><li className='nav-link'>HOME</li></NavLink>
-                    <NavLink to='/products'><li className='nav-link' >PRODUCTS</li></NavLink>
-                    <NavLink to='/tools'><li className='nav-link' >TOOLS</li></NavLink>
-                    <NavLink to='/services'><li className='nav-link' >SERVICES</li></NavLink>
-                    <NavLink to='/contact'><li className='nav-link'>CONTACT US</li></NavLink>
-                </ul>
-            </div>
-        </div>
+        </>
     )
 }

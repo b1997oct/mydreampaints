@@ -1,23 +1,15 @@
 footer {
 	background: #101010;
-	padding: 50px 0;
-}
-.single-box p {
-	color: #fff;
-	line-height: 1.9;
-}
-
-.single-box h2 {
-	color: #fff;
-	font-size: 20px;
-	font-weight: 700;
+	padding-top: 50px;
+	color: white;
 }
 
 .socials {
 	display: flex;
+	gap: 2rem;
 }
 .fa-icons {
-	margin: 1rem;
+	/* margin: 1rem; */
 	transform: scale(2);
 	transition: all .2s;
 }
@@ -25,6 +17,7 @@ footer {
 	border: 1.5px solid #fff;
 	background-color: #101010;
 	color: white;
+	right: .5rem;
 }
 
 .send-btn:hover {
@@ -38,14 +31,11 @@ footer {
 	transform: scale(2.3);
 }
 
+.input-box2 {
+    padding: 0 1rem;
+    width: 100%;
+    outline: none;
+	/* border-radius: 5px; */
+	height: 2.15rem;
 
-@media (max-width: 767px) {
-	.single-box {
-		margin-bottom: 50px;
-	}
-}
-@media (min-width: 768px) and (max-width: 991px) {
-	.single-box {
-		margin-bottom: 50px;
-	}
 }
