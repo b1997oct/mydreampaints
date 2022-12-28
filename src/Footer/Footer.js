@@ -8,7 +8,7 @@ import { facebook, googleMap, insagram, linkedin, pinterest, twitter, youtube } 
 function Footer() {
   return (
 
-    <footer className='pb-10'>
+    <footer className='pb-[4%] lg:mt-0'>
       <div className="md:grid lg:flex lg:justify-around md:grid-cols-2">
         <div className='block m-4'>
           <h1 className='mb-3 font-mono'>Follow us on</h1>

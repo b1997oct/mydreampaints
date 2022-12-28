@@ -4,7 +4,7 @@ import Header from './Headers/Header';
 import Footer from './Footer/Footer';
 import Home from './Components/Home/Home';
 import Products from './Components/Products/Products';
-import Services from './Components/Services';
+import Services from './Components/Services/Services';
 import Tools from './Components/Tools/Tools';
 import Contact from './Components/Contact';
 

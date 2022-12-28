@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const Products = () => {
+const Services = () => {
   return (
 
     <div className="flex m-2">
@@ -20,13 +20,13 @@ const Products = () => {
      </div> */}
 
       <div className="sm:m-1 m-0 ">
-        <div className="m-8 text-justify lg:text-2xl md:text-xl sm:text-md text-lg font-semibold ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus consequatur magni ratione facere rerum sunt, voluptatem quidem! Nam sapiente libero quisquam ratione fugit cum quos aliquid possimus consequatur magnam!</div>
-        <Box className="flex flex-wrap mt-8">
+        {/* <div className="m-8 text-justify lg:text-2xl md:text-xl sm:text-md text-lg font-semibold ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus consequatur magni ratione facere rerum sunt, voluptatem quidem! Nam sapiente libero quisquam ratione fugit cum quos aliquid possimus consequatur magnam!</div> */}
+        <Box className="flex flex-wrap mt-6 md:mt-0">
           {itemsList.map((items) => (
-            <Card className="w-[100%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
+            <Card className="w-[100%] m-[2%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
               <CardActionArea>
-                <div className="flex flex-col md:flex-row h-[85vh]">
-                <div className="w-1/2 md:p-4 md:mb-2 md:ml-2 p-2 lg:scale-75 ml-[25%] h-[45%] md:h-full lg:w-1/3">
+                <div className="flex flex-col md:flex-row h-[80vh]">
+                <div className="w-1/2 md:p-4 md:mb-2 md:ml-2 p-2 lg:scale-75 ml-[25%] h-[45%] md:h-full">
                 <CardMedia
                 className=" w-full h-full rounded-md"
                   component={"img"}
@@ -34,7 +34,7 @@ const Products = () => {
                   alt={items.name}
                 />
                 </div>
-                <CardContent className="bg-slate-200 rounded-md flex-1">
+                <CardContent className={items.bg ?`${items.bg} rounded-md flex-1` :"bg-indigo-200 rounded-md flex-1"}>
                   <div className="flex flex-col">
                     <Typography variant="h5" gutterBottom component={"div"} style={{ flex: 1 }}>
                       {items.name}
@@ -56,4 +56,5 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Services;
+
