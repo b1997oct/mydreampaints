@@ -7,15 +7,21 @@ import Products from './Components/Products/Products';
 import Services from './Components/Services/Services';
 import Tools from './Components/Tools/Tools';
 import Contact from './Components/Contact';
+import CallMe from './Components/Store/CallMe';
+
 
 
 
 function App() {
 
   return (
+  
 
-    <div className='App bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500'>
-      <Header />
+    <div className='bg-gradient-to-tr from-gray-300 to-gray-200'>
+    {/* // <div className='App bg-gradient-to-tr from-fuchsia-400 to-pink-500 via-rose-300'> */}
+      
+        <Header />
+        {/* <CallMe /> */}
         <Routes> 
           <Route exact path='/' element={<Home />} />
           <Route path='/products' element={<Products />} />

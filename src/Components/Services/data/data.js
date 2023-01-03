@@ -12,7 +12,7 @@ export const itemsList = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
     image: Dosa,
     rating: 4,
-    bg:"bg-green-400",
+    bg:"bg-gradient-to-r from-pink-500 to-rose-500",
   },
   {
     name: "service2",
@@ -20,7 +20,7 @@ export const itemsList = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
     image: Chola,
     rating: 5,
-    bg:"bg-pink-300",
+    bg:"bg-gradient-to-r from-indigo-400 to-cyan-400",
   },
   {
     name: "service4",
@@ -28,7 +28,7 @@ export const itemsList = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
     image: Idli,
     rating: 4,
-    bg:"bg-red-300",
+    bg:"bg-gradient-to-r from-fuchsia-500 to-pink-500",
   },
   {
     name: "service3",
@@ -36,7 +36,7 @@ export const itemsList = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
     image: MasalaDosa,
     rating: 4,
-    bg:"bg-blue-300",
+    bg:"bg-gradient-to-r from-rose-400 to-red-500",
   },
   {
     name: "service5",
@@ -44,7 +44,7 @@ export const itemsList = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
     image: Paneer,
     rating: 4,
-    bg:"bg-yellow-300",
+    bg:"bg-yellow-500",
   },
   {
     name: "service7",

@@ -5,6 +5,10 @@ import logo from "../Assets/logo.png"
 import React, { useState } from 'react'
 import { FaHome, FaList, FaPaintRoller, FaPhone, FaSearch, FaTools, FaWarehouse } from "react-icons/fa"
 import { useEffect } from 'react'
+import { Swiper } from 'swiper/react'
+import { SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper'
+
 
 export default function Header() {
 
@@ -13,6 +17,21 @@ export default function Header() {
     const [search, setSearch] = useState(false)
 
     const navigate = useNavigate();
+
+    var swipers = [
+        {
+            title: "Happy New Year to All wish you best of luck...",
+            id: 1
+        },
+        {
+            title: "Mega offer on 2023 new year upto 50% Off...",
+            id: 2
+        },
+        {
+            title: "contact for any quires 24*7 custumer care",
+            id: 3
+        }
+    ]
     // Hamburger toggle
 
     const navFun = () => {
@@ -35,6 +54,26 @@ export default function Header() {
     return (
         <>
             <div className='header-div bg-white'>
+                <div class="bg-gradient-to-r relative z-50 from-indigo-400 to-cyan-400 py-[2px] hover:from-pink-400 hover:to-yellow-400 overflow-hidden">
+                    <div className='font-semibold text-white px-2 whitespace-nowrap'>
+                        <Swiper
+                            slidesPerView={1}
+                            speed={2000}
+                            loop={true}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false
+                            }}
+                            modules={[Autoplay]}
+
+                        >
+                            {swipers.map((items) => (
+                            <SwiperSlide className="text-center" key={items.id}>{items.title}</SwiperSlide>
+                             ))}
+
+                        </Swiper>
+                    </div>
+                </div>
                 <div className='line'></div>
                 <div className='flex'>
                     <div className="flex flex-1 m-auto relative z-10 bg-white w-[100%] h-[2.5rem] " >
@@ -52,7 +91,7 @@ export default function Header() {
                         <Hamburger toggled={isOpen} toggle={setOpen} />
                     </div>
                     <div className={isOpen ? 'nav-div' : 'nav-div back-anime'} style={{ display: display ? "flex" : null }}>
-                        <ul className='navbar my-[auto] md:my-2 md:gap-2 lg:gap-4 sm:text-sm text-[1rem] lg:text-[1rem]' onClick={navFun}>
+                        <ul className='navbar my-[auto] md:my-2 md:gap-2 lg:gap-4 text-lg md:text-base lg:text-xl' onClick={navFun}>
                             <NavLink to="/home" ><li className='flex gap-1 items-baseline'><FaHome />Home</li></NavLink>
                             <NavLink to='/products'><li className='flex gap-1 items-baseline' ><FaList />PRODUCTS</li></NavLink>
                             <NavLink to='/tools'><li className='flex gap-1 items-baseline' ><FaPaintRoller />TOOLS</li></NavLink>

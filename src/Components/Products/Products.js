@@ -12,40 +12,43 @@ import {
 const Products = () => {
   return (
 
-    <div className="flex m-2">
+    <div className="">
       {/* <div className="w-[40vw] h-[85vh] fixed rounded-md border-2 border-red-500 border-double bg-white">
 
 
 
      </div> */}
 
-      <div className="sm:m-1 m-0 ">
-        <div className="m-8 text-justify lg:text-2xl md:text-xl sm:text-md text-lg font-semibold ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus consequatur magni ratione facere rerum sunt, voluptatem quidem! Nam sapiente libero quisquam ratione fugit cum quos aliquid possimus consequatur magnam!</div>
+      <div className="">
+        <div className='py-10 bg-gradient-to-r from-sky-500 to-indigo-500 text-center flex justify-center items-center'>
+          <div className="mx-4 text-justify lg:text-4xl md:text-3xl text-2xl font-semibold text-white">Our products</div>
+        </div>
+
         <Box className="flex flex-wrap mt-8">
           {itemsList.map((items) => (
             <Card className="w-[100%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
               <CardActionArea>
                 <div className="flex flex-col md:flex-row h-[85vh]">
-                <div className="w-1/2 md:p-4 md:mb-2 md:ml-2 p-2 lg:scale-75 ml-[25%] h-[45%] md:h-full lg:w-1/3">
-                <CardMedia
-                className=" w-full h-full rounded-md"
-                  component={"img"}
-                  src={items.image}
-                  alt={items.name}
-                />
-                </div>
-                <CardContent className="bg-slate-200 rounded-md flex-1">
-                  <div className="flex flex-col">
-                    <Typography variant="h5" gutterBottom component={"div"} style={{ flex: 1 }}>
-                      {items.name}
-                    </Typography>
+                  <div className="w-1/2 md:p-4 md:mb-2 md:ml-2 p-2 lg:scale-75 ml-[25%] h-[45%] md:h-full lg:w-1/3">
+                    <CardMedia
+                      className=" w-full h-full rounded-md"
+                      component={"img"}
+                      src={items.image}
+                      alt={items.name}
+                    />
                   </div>
-                  <Typography variant="body2">{items.description}</Typography>
-                  <Typography variant="h6" component={"div"}>
+                  <CardContent className="bg-[#3ae] rounded-md flex-1 text-white">
+                    <div className="flex flex-col">
+                      <Typography variant="h5" gutterBottom component={"div"} style={{ flex: 1 }}>
+                        {items.name}
+                      </Typography>
+                    </div>
+                    <Typography variant="body2">{items.description}</Typography>
+                    <Typography variant="h6" component={"div"}>
                       rating : {items.rating}
                     </Typography>
 
-                </CardContent>
+                  </CardContent>
                 </div>
               </CardActionArea>
             </Card>

@@ -8,8 +8,13 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { useState } from "react";
 
 const Services = () => {
+
+  const [count , setCount ] = useState(0);
+
+
   return (
 
     <div className="flex m-2">
@@ -23,6 +28,9 @@ const Services = () => {
         {/* <div className="m-8 text-justify lg:text-2xl md:text-xl sm:text-md text-lg font-semibold ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus consequatur magni ratione facere rerum sunt, voluptatem quidem! Nam sapiente libero quisquam ratione fugit cum quos aliquid possimus consequatur magnam!</div> */}
         <Box className="flex flex-wrap mt-6 md:mt-0">
           {itemsList.map((items) => (
+            // if (count%2 === 1) {
+              
+            // } 
             <Card className="w-[100%] m-[2%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
               <CardActionArea>
                 <div className="flex flex-col md:flex-row h-[80vh]">
@@ -30,17 +38,17 @@ const Services = () => {
                 <CardMedia
                 className=" w-full h-full rounded-md"
                   component={"img"}
-                  src={items.image}
+                  // src={items.image}
                   alt={items.name}
                 />
                 </div>
                 <CardContent className={items.bg ?`${items.bg} rounded-md flex-1` :"bg-indigo-200 rounded-md flex-1"}>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col text-white">
                     <Typography variant="h5" gutterBottom component={"div"} style={{ flex: 1 }}>
                       {items.name}
                     </Typography>
                   </div>
-                  <Typography variant="body2">{items.description}</Typography>
+                  <Typography variant="body2" className="text-white">{items.description}</Typography>
                   <Typography variant="h6" component={"div"}>
                       rating : {items.rating}
                     </Typography>

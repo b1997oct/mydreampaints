@@ -1,52 +1,72 @@
 import React from 'react'
 import { itemsList } from "./data";
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
-import { ArrowCircleRight } from '@mui/icons-material';
+import { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Scrollbar } from "swiper";
+
 
 
 function FeatureProducts() {
   return (
     <div>
-      
-      <div className="flex m-2">
-      {/* <div className="w-[40vw] h-[85vh] fixed rounded-md border-2 border-red-500 border-double bg-white">
+
+      <div className="">
+        {/* <div className="w-[40vw] h-[85vh] fixed rounded-md border-2 border-red-500 border-double bg-white">
      </div> */}
-      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-    {itemsList.map((menu) => (
-      <Card sx={{ maxWidth: "350px", display: "flex", m: 2 }}>
-        <CardActionArea>
-          <CardMedia
-            sx={{ minHeight: "400px" }}
-            component={"img"}
-            // src={menu.image}
-            alt={menu.name}
-          />
-          <CardContent>
-            <div className="flex flex-row">
-            <Typography variant="h5" gutterBottom component={"div"} style={{flex:1}}>
-             {menu.name}
-            </Typography>
-            {/* <Typography variant="h6" gutterBottom component={"div"}>
-            rating : {menu.rating}
-            </Typography> */}
-            <div>
-                <ArrowCircleRight />
-            </div>
-            </div>
-            <Typography variant="body2">{menu.description}</Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    ))}
-  </Box>
-    </div>
+        <div className='py-10 bg-gradient-to-r from-sky-500 to-indigo-500 text-center'>
+          <h className="text-white font-semibold text-2xl md:text-3xl lg:text-4xl">Our Featured products</h>
+        </div>
+        <Swiper
+          slidesPerView={1}
+          breakpoints={{
+            768: {
+              slidesPerView:3
+            },
+            645 : {
+              slidesPerView:2
+            },
+            375 : {
+              slidesPerView:1.5
+            }
+          }}
+          centeredSlides={true}
+          spaceBetween={30}
+          scrollbar={{
+            hide: true,
+          }}
+          navigation={true}
+          modules={[Navigation, Scrollbar]}
+          className="h-[32rem] my-4"
+        >
+          {itemsList.map((items) => (
+            <SwiperSlide key={items.id}
+              className="bg-white w-24"
+            >
+              <div className='gap-2'>
+                <div className='flex w-[100%] h-[20rem]'>
+                <img
+                  className="w-full"
+                  src={items.image}
+                  alt={items.name}
+                />
+                </div>
+                <div className='p-2'>
+                <div>
+                  {items.name}
+                </div>
+                <div>
+                  {items.description}
+                </div>
+                <div>
+                  rating : {items.rating}
+                </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+          ))}
+        </Swiper>
+      </div>
     </div>
   )
 }

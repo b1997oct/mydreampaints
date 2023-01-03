@@ -58,7 +58,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    /* flex: 1; */
 }
 .input-box {
     height: 2.7rem;
@@ -70,9 +70,9 @@
 
 .button-1 {
     height: 2.5rem; 
-    background-color: black;
-    color: white;
-    font-weight: 500;
+    background-color: rgb(255, 115, 0);
+    color: rgb(58, 78, 255);
+    font-weight: 700;
     height: 2.7rem;
     
 }

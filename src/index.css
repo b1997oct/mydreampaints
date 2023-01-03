@@ -10,3 +10,7 @@ body {
 /* .footer {
   @apply sm:flex-row flex flex-col
 } */
+
+.f-cards {
+  @apply rounded-xl
+}

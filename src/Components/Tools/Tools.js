@@ -13,7 +13,13 @@ const Tools = () => {
 
 
   return (
-    <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+
+    <div>
+
+<div className='py-10 bg-gradient-to-r from-sky-500 to-indigo-500 text-center flex justify-center items-center'>
+          <div className="mx-4 text-justify lg:text-4xl md:text-3xl text-2xl font-semibold text-white">Tools to make painting easy</div>
+        </div>
+    <Box className="flex flex-wrap justify-center">
     {MenuList.map((menu) => (
       <Card sx={{ maxWidth: "350px", display: "flex", m: 2 }}>
         <CardActionArea>
@@ -38,6 +44,8 @@ const Tools = () => {
       </Card>
     ))}
   </Box>
+  
+  </div>
   );
 };
 
