@@ -1,6 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap'); */ */
 
 .App {
     /* background-image: linear-gradient(rgb(253, 247, 143), rgb(255, 34, 0)); */
-    font-family: monospace;
+    margin: 0;
 }

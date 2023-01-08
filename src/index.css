@@ -1,16 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   margin:0;
-
+  padding: 0;
+  font-family: 'Open Sans' 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* .footer {
-  @apply sm:flex-row flex flex-col
-} */
-
 .f-cards {
-  @apply rounded-xl
+  @apply rounded-md
 }

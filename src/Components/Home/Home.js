@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button } from "@material-tailwind/react";
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./home.css";
 import "swiper/css/scrollbar";
+import  painting from "../../Assets/painting.png"
 import FeatureProducts from '../Utils/FeatureProducts';
+import { FormatPaintSharp, SafetyCheckTwoTone, TimerRounded } from "@mui/icons-material";
+import { FaHandshake, FaTree } from "react-icons/fa";
 
 
 
@@ -63,48 +66,50 @@ function Home() {
             <div className="container-fluid py-5">
                 <div className="container">
                     <div className="row g-5">
-                        <div className="col-lg-4 col-md-6">
-                            <div className="mb-3">
-                                <h6 className="text-uppercase">Services</h6>
-                                <h1 className="display-5">Painting Services</h1>
+                        <div className="col-lg-4 col-md-6 flex justify-center flex-col">
+                            <div className="mb-3 ">
+                                <h6 className="text-uppercase text-center text-2xl">Painting Service</h6>
                             </div>
-                            <p className="mb-4">Tempor erat elitr at rebum at at clita. Diam dolor diam ipsum et tempor sit. Clita erat ipsum et lorem et sit sed stet labore</p>
-                            <Button className='bg-gradient-to-br from-indigo-500 to-sky-500' variant='contained'
-                          onClick={()=>navigate("/contact")}
-                             >Contact Us</Button>
+                            <div className="overflow-hidden justify-center m-auto ">
+                            <img src={painting} alt="Paint" className="" />
+                            </div>
+                            <Button className="bg-blue-500 px-2 my-4 mx-1" size="sm"
+                          onClick={()=>navigate("/services")}
+                             >SERVICES</Button>
                         </div>
-                        <div className="col-lg-4 col-md-6 hover:scale-105 transition-all ">
-                            <div className="service-item bg-light text-center p-5 f-cards">
+                        <div className="col-lg-4 col-md-6 hover:scale-105 transition-all my-auto">
+                            <div className="service-item bg-light text-center p-5 f-cards shadow cursor-pointer">
                                 <i className="fa fa-carrot display-1 text-primary mb-3"></i>
-                                <h4>Fresh Vegetables</h4>
+                                <h4>100% Dust Free Process</h4>
                                 <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita nonumy dolor magna dolor vero</p>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6 hover:scale-105 transition-all ">
-                            <div className="service-item bg-light text-center p-5 f-cards">
+                        <div className="md:hidden"></div>
+                        <div className="col-lg-4 col-md-6 hover:scale-105 transition-all my-auto">
+                            <div className="service-item bg-light text-center p-5 f-cards shadow cursor-pointer">
                                 <i className="fa fa-apple-alt display-1 text-primary mb-3"></i>
-                                <h4>Fresh Fruits</h4>
+                                <h4>Expert Color Consultancy</h4>
                                 <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita nonumy dolor magna dolor vero</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 hover:scale-105 transition-all">
-                            <div className="service-item bg-light text-center p-5 f-cards">
+                            <div className="service-item bg-light text-center p-5 f-cards shawdow cursor-pointer">
                                 <i className="fa fa-dog display-1 text-primary mb-3"></i>
-                                <h4>Healty Cattle</h4>
+                                <h4>Professionally Trained Painters</h4>
                                 <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita nonumy dolor magna dolor vero</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 hover:scale-105 transition-all">
-                            <div className="service-item bg-light text-center p-5 f-cards">
+                            <div className="service-item bg-light text-center p-5 f-cards shadow cursor-pointer">
                                 <i className="fa fa-tractor display-1 text-primary mb-3"></i>
-                                <h4>Modern Truck</h4>
+                                <h4>On Time Completion</h4>
                                 <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita nonumy dolor magna dolor vero</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 hover:scale-105 transition-all">
-                            <div className="service-item bg-light text-center p-5 f-cards">
+                            <div className="service-item bg-light text-center p-5 f-cards shadow cursor-pointer">
                                 <i className="fa fa-seedling display-1 text-primary mb-3"></i>
-                                <h4>Farming Plans</h4>
+                                <h4>Transparent Pricing</h4>
                                 <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita nonumy dolor magna dolor vero</p>
                             </div>
                         </div>
@@ -121,49 +126,54 @@ function Home() {
 
             {/* ........................Featurs Why us............................ */}
 
-            <div className="container-fluid feature py-5 mb-4 mt-5 bg-gradient-to-tr from-cyan-300 to-red-100">
+            <div className="container-fluid feature py-5 mb-4 mt-5 bg-[#FECD45] ">
                 <div className="container py-5 pb-lg-0">
                     <div className="mx-auto text-center mb-3 pb-2" >
-                        <h6 className="text-uppercase text-green-500">Features</h6>
-                        <h1 className="display-5 text-indigo-600">Why Choose Us!!!</h1>
+                        <h6 className="text-uppercase text-white font-semibold">Features</h6>
+                        <h1 className="text-[#2568FB] font-semibold text-5xl">Why Choose Us!!!</h1>
                     </div>
                     <div className="row g-5">
                         <div className="col-lg-3">
                             <div className="text-black mb-5">
-                                <div className="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3">
-                                    <i className="fa fa-seedling fs-4 text-white"></i>
+                                <div className="flex justify-center bg-white p-2 rounded-full">
+                                    <FormatPaintSharp className="scale-125 text-orange-500" />
                                 </div>
-                                <h4 className="">100% Organic</h4>
-                                <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita</p>
+                                <h className="p-1 font-semibold text-start text-xl">Expert Color Consultancy</h>
+                                <p className="mb-0  p-1 font-semibold text-justify">Our experts help choose color palettes that suit your preference . Get free color previews before getting actual painting!</p>
                             </div>
                             <div className="">
-                                <div className="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3">
-                                    <i className="fa fa-award fs-4 text-white"></i>
+                                <div className="flex justify-center bg-white p-2 rounded-full">
+                                    <FaTree className="scale-150 text-green-400 my-1" />
                                 </div>
-                                <h4 className="">Award Winning</h4>
-                                <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita</p>
+                                <h className="p-1 font-semibold text-start text-xl">Hygienic and Dust Free Process</h>
+                                <p className="mb-0  p-1 font-semibold text-justify">We use high tech machines to ensure a dust-free and safe home makeover.</p>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 ">
                             <div className="rounded-lg bg-white h-100 text-center p-5 pb-lg-0">
-                                <p>At et justo elitr amet sea at. Magna et sit vero at ipsum sit et dolores rebum. Magna sea eos sit dolor, ipsum amet no tempor ipsum eirmod lorem eirmod diam tempor dolor eos diam et et diam dolor ea. Clita est rebum amet dolore sit. Dolor stet dolor duo clita, vero dolor ipsum amet dolore magna lorem erat stet sed vero dolor</p>
+                                <SafetyCheckTwoTone className="scale-[3] mb-4 text-green-500" />
+                                <h4 className="text-green-700">Procare & Safety</h4>
+                                <div className="font-semibold text-justify">Your Safety is our first priority. Our team and applicators are vaccinated and ensure hygienic service delivery. Our core focus is on green technology. We make and sell paints that are not only technologically advanced but also environment friendly.</div>
                                 {/* <img className="img-fluid" src="img/feature.png" alt=""> */}
+                                <Button className="bg-blue-500 px-2 m-1" size="sm"
+                          onClick={()=>navigate("/contact")}
+                             >CONTACT US</Button>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className="mb-5">
-                                <div className="bg-secondary rounded-pill flex items-center justify-center mb-3">
-                                    <i className="fa fa-tractor fs-4 text-white"></i>
+                                <div className="flex justify-center bg-white p-2 rounded-full">
+                                    <TimerRounded className="scale-150 text-gray-500" />
                                 </div>
-                                <h4 className="">Modern Farming</h4>
-                                <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita</p>
+                                <h className="p-1 font-semibold text-start text-xl">Supervision & On Time Completion</h>
+                                <p className="mb-0  p-1 font-semibold text-justify">We work on your schedule, supervise and plan execution to make sure that we complete on-time.</p>
                             </div>
                             <div className="">
-                                <div className="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3">
-                                    <i className="fa fa-phone-alt fs-4 text-white"></i>
+                                <div className="flex justify-center bg-white p-[.7rem] rounded-full">
+                                    <FaHandshake className="scale-[2.5] text-sky-500" />
                                 </div>
-                                <h4 className="">24/7 Support</h4>
-                                <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita</p>
+                                <h className="p-1 font-semibold text-start text-xl">Protection of furniture</h>
+                                <p className="mb-0 p-1 font-semibold text-justify">We secure and shift all your goods with the utmost care.</p>
                             </div>
                         </div>
                     </div>

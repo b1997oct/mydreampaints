@@ -28,7 +28,7 @@ const Products = () => {
           {itemsList.map((items) => (
             <Card className="w-[100%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
               <CardActionArea>
-                <div className="flex flex-col md:flex-row h-[85vh]">
+                <div className="flex flex-col md:flex-row md:h-[35rem] h-[85vh]">
                   <div className="w-1/2 md:p-4 md:mb-2 md:ml-2 p-2 lg:scale-75 ml-[25%] h-[45%] md:h-full lg:w-1/3">
                     <CardMedia
                       className=" w-full h-full rounded-md"

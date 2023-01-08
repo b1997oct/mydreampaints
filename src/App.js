@@ -17,13 +17,12 @@ function App() {
   return (
   
 
-    <div className='bg-gradient-to-tr from-gray-300 to-gray-200'>
-    {/* // <div className='App bg-gradient-to-tr from-fuchsia-400 to-pink-500 via-rose-300'> */}
-      
+    <div className='bg-[#E1F2F7]'>  
+        {/*  */}
         <Header />
-        {/* <CallMe /> */}
+        <CallMe />
         <Routes> 
-          <Route exact path='/' element={<Home />} />
+          <Route exact path='/home' element={<Home />} />
           <Route path='/products' element={<Products />} />
           <Route path='/services' element={<Services />} />
           <Route path='/tools' element={<Tools />} />
