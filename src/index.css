@@ -6,9 +6,9 @@
 body {
   margin:0;
   padding: 0;
-  font-family: 'Open Sans' 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .f-cards {
-  @apply rounded-md
+  @apply rounded-3xl
 }

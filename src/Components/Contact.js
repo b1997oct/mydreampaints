@@ -1,10 +1,12 @@
 import "./Global.css"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Collapse from 'react-bootstrap/Collapse';
 import { FaChevronDown } from 'react-icons/fa'
 import { useNavigate } from "react-router-dom";
-import { Alert } from "@material-tailwind/react";
+import { Alert,  Button } from "@material-tailwind/react";
 import { Select, TextField,MenuItem } from "@mui/material";
+
+
 
 function Contact() {
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -19,20 +21,32 @@ function Contact() {
 
   // Alert
   const [show, setShow] = useState(false);
+  const [active, setActive] = useState(true);
 
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault()
+    localStorage.setItem("admin",false)
+
+    if(values.name === `${process.env.REACT_APP_ADMIN}`){
+      console.log("admin...........")
+      localStorage.setItem("admin",true)
+      navigate("/admin")
+    }
     console.log(values)
-    // navigate("/")
+
+    setActive(false)
+    
   }
 
  function handleAlert () {
   setShow(true)
  } 
 
-
+ useEffect(()=>{
+  window.scrollTo(0,0)
+},[])
 
   function handleChange(e) {
 
@@ -56,14 +70,14 @@ function Contact() {
         show={show}
         animate={{
           mount: { y: 0 },
-          unmount: { y: 100 },
+          unmount: { y: 80 },
         }}
         onClick={() => setShow(false)}
         className="absolute bg-green-500 cursor-pointer font-bold text-center"
       >
         Thank You for submiting we will cantact you with in 24 hours
       </Alert>
-      <div className="contact-div flex flex-col  lg:justify-center">
+      { active ? <div className="contact-div flex flex-col  lg:justify-center">
         <div className="justify-evenly flex">
           <h4 className="sm:text-3xl md:text-4xl lg:text-5xl text-4xl mt-[3%] gap-3 flex flex-col sm:flex-row">
             <span className="text-[#04ef7a] text-center font-bold">CONNECT WITH</span> <h className="text-[#000080] font-bold">MY DREAM PAINT</h></h4>
@@ -88,7 +102,7 @@ function Contact() {
                       >
                         <MenuItem disabled >Select your Asset stage</MenuItem>
                         <MenuItem value="All Constructions">All Constructions</MenuItem>
-                        <MenuItem value="New Contruction">New Contruction</MenuItem>
+                        <MenuItem value="New Contruction">New Construction</MenuItem>
                         <MenuItem value="Old Construction">Old Construction</MenuItem>
                         <MenuItem value="Under Construction">Under Construction</MenuItem>
                       </Select>
@@ -101,11 +115,10 @@ function Contact() {
           <div className="lg:w-[35rem] sm:max-w-[35rem] md:my-4 my-[0] mx-[auto] sm:border-r sm:border-l border-gray-800">
             <div className="hr-line"></div>
             <div className="about-div">
-              <div className="cc-div">
+              <div className="cc-div cursor-pointer"  onClick={() => setAboutOpen(!aboutOpen)}>
                 <h6 className="title text-lg ">About Us</h6>
                 <FaChevronDown
                   className={aboutOpen ? "chevron1" : "chevron2"}
-                  onClick={() => setAboutOpen(!aboutOpen)}
                   aria-controls="example-collapse-text"
                   aria-expanded={aboutOpen}
                 >
@@ -113,29 +126,26 @@ function Contact() {
               </div>
               <Collapse in={aboutOpen}>
                 <div className="text-justify text-black font-semibold mb-2">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                  terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-                  labore wes anderson cred nesciunt sapiente ea proident.
+                <span className="font-bold">My dream Paint</span> produces high-quality paints with innovation and eco-friendliness. We consistently deliver paint solutions that not only serve your needs, but also protect the world we live in.
                 </div>
               </Collapse>
             </div>
             <div className="hr-line"></div>
             <div className="help-div">
-              <div className="cc-div">
+              <div className="cc-div cursor-pointer" onClick={() => setHelpOpen(!helpOpen)}>
                 <h6 className="title text-lg ">Help</h6>
                 <FaChevronDown
                   className={helpOpen ? "chevron1" : "chevron2"}
-                  onClick={() => setHelpOpen(!helpOpen)}
                   aria-controls="example-collapse-text"
                   aria-expanded={helpOpen}
                 >
                 </FaChevronDown>
               </div>
               <Collapse in={helpOpen}>
-                <div id="example-collapse-text" className="text-justify text-black font-semibold mb-2">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                  terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-                  labore wes anderson cred nesciunt sapiente ea proident.
+                <div id="example-collapse-text" className="text-justify text-black font-semibold mb-2 ">
+                If you have any questions or need further information, please <span className="font-bold">feel free to contact Us.</span>
+                 Our Phone number <span className="font-bold">+91 9482658028</span> our business email <span className="font-bold">mydreampaintmgt@gmail.com</span><br />
+                "Developer contact email <span className="font-bold">b1997oct@gmail.com</span>"
                 </div>
               </Collapse>
             </div>
@@ -146,6 +156,23 @@ function Contact() {
         {/* <div className="hr-line"></div> */}
 
       </div>
+      : 
+      <div className="flex flex-col items-center  h-[70vh]">
+      <div className="flex flex-col items-center mt-8">
+        <div className="text-red-500 font-bold text-4xl">Congratulations!</div>
+        <h3>Thank your for submiting</h3>
+      </div>
+      <div className="w-20 h-20">
+        <img src="#" alt="img" />
+      </div>
+      <div className="flex md:flex-row flex-col justify-between gap-4">
+        <Button variant="contained" size="sm" className="bg-green-500 w-full truncate hover:bg-green-600" onClick={()=>setActive(true)}>Submit one more form</Button>
+        <Button variant="contained" size="sm" className="w-full hover:bg-blue-600" onClick={()=>navigate("/")} >Go to home page</Button>
+      </div>
+      </div>
+      
+      }
+      
     </div>
   )
 }

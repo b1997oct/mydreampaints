@@ -1,51 +1,69 @@
-import Dosa from "../images/dosa.jpg";
-import Chola from "../images/chhola.jpg";
-import Idli from "../images/idli.jpg";
-import MasalaDosa from "../images/masala.jpg";
-import Paneer from "../images/paneer.jpg";
-import Gujrati from "../images/gujrati.jpeg";
+import pt1 from "../images/pt1.jpg";
+import pt2 from "../images/pt2.jpg";
+import pt3 from "../images/pt3.jpg";
+import pt4 from "../images/pt4.jpg";
+import pt5 from "../images/pt5.jpg";
+import pt6 from "../images/pt6.jpg";
+import pt7 from "../images/pt7.jpg";
+import pt8 from "../images/pt8.jpg";
+
 
 export const MenuList = [
   {
-    name: "paint",
+    name: "9x2 inch Texture Roller",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Dosa,
+      "Texture Roller, are sourced from the most reliable and official vendors, chosen after performing detailed market surveys  We are dedicatedly involved in providing an excellent quality ",
+    image: pt1,
     rating: 4,
   },
   {
-    name: "paint2",
+    name: "9x2 inch Acrylic Epoxy Roller",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Chola,
+    "9x2 inch Acrylic Epoxy Roller is a premium quality product. Roller are manufactured by using quality assured material and advanced techniques, which make them up to the standard in this highly challenging field.",
+    image: pt2,
     rating: 5,
   },
   {
-    name: "Paint3",
+    name: "Multi Interior Paint Roller with Plastic Handle",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Idli,
+      "Multi Interior Paint Roller with Plastic Handle, is a premium quality product from my dream paint. Moglix is a well-known ecommerce platform for qualitative range of Paint Rollers",
+    image: pt3,
     rating: 4,
   },
   {
-    name: "paint4",
+    name: "White Premium Synthetic Bristle Paint Brush",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: MasalaDosa,
+      "White Premium Synthetic Bristle Paint Brush is perfect for all types of paint applications. The synthetic bristles are designed to provide superior performance and perfect results.",
+    image: pt4,
     rating: 4,
   },
   {
-    name: "paint5",
+    name: "Paint Brush for Oil & Water Based Paint, Size: 5 inch",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Paneer,
+      "Versatile, Durable & Reusable, Soft Bristles for Superior Finish, Flat & Angled Brushes, Soft Polyester-blend Bristles, Tapered & Tipped & Reusable & Easy to Clean. The Stiffness of the Brushes Makes them Ideal for Outdoor Projects with Different Temperatures & Humidity.",
+    image: pt5,
     rating: 4,
   },
   {
-    name: "paint6",
+    name: "150mm & 125mm Multicolour Paint Brush Set, PB-M-D-2",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Gujrati,
+      "Fine Smooth Finish Effect on Wall & Other Surfaces. Easy Blending & Helps in Loose Painting. Ideal for interior or Exterior Use with Latex or Oil Base Paint.",
+    image: pt6,
     rating: 5,
   },
+  {
+    name: "25mm Multicolour Paint Brush Set, PB-B-25-6",
+    description:
+      "Ensures Bold Stroke Techniques & Exceptional Quality. Easy Blending, Aids in Highlighting & Helps in Loose Painting. Choose from a range of vibrant colours to suit your every need.",
+    image: pt7,
+    rating: 5,
+  },
+  {
+    name: "Infinizy Cleaning Sponge",
+    description:
+      "Easy Rinsing. Infinizy Cleaning Sponge is a premium quality product from Infinizy. Moglix is a well-known ecommerce platform for qualitative range of Squeegees Wipes & Long Lasting.",
+    image: pt8,
+    rating: 5,
+  },
+  
 ];

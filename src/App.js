@@ -8,6 +8,7 @@ import Services from './Components/Services/Services';
 import Tools from './Components/Tools/Tools';
 import Contact from './Components/Contact';
 import CallMe from './Components/Store/CallMe';
+import Admin from './Admin';
 
 
 
@@ -16,8 +17,7 @@ function App() {
 
   return (
   
-
-    <div className='bg-[#E1F2F7]'>  
+     <div className='bg-[#E1F2F7]'>  
         {/*  */}
         <Header />
         <CallMe />
@@ -27,6 +27,7 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/tools' element={<Tools />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/admin' element={<Admin />} />
           <Route path='*' element={<Home />} />
         </Routes>
         <Footer />    

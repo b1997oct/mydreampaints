@@ -1,51 +1,51 @@
-import Dosa from "../images/dosa.jpg";
-import Chola from "../images/chhola.jpg";
-import Idli from "../images/idli.jpg";
-import MasalaDosa from "../images/masala.jpg";
-import Paneer from "../images/paneer.jpg";
-import Gujrati from "../images/gujrati.jpeg";
+import p1 from "../images/p1.jpg";
+import p2 from "../images/p2.jpg";
+import p3 from "../images/p3.jpg";
+import p4 from "../images/p4.jpg";
+import p5 from "../images/p5.jpg";
+import p6 from "../images/p6.jpg";
 
 export const itemsList = [
   {
     name: "paint",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Dosa,
+    image: p6,
     rating: 4,
   },
   {
     name: "paint2",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Chola,
+    image: p6,
     rating: 5,
   },
   {
     name: "Paint3",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Idli,
+    image: p6,
     rating: 4,
   },
   {
     name: "paint4",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: MasalaDosa,
+    image: p6,
     rating: 4,
   },
   {
     name: "paint5",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Paneer,
+    image: p6,
     rating: 4,
   },
   {
     name: "paint6",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
-    image: Gujrati,
+    image: p6,
     rating: 5,
   },
 ];

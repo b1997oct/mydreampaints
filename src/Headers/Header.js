@@ -54,8 +54,8 @@ export default function Header() {
     return (
         <>
             <div className='header-div bg-white'>
-                <div class="bg-gradient-to-r relative z-50 from-indigo-400 to-cyan-400 py-[2px] hover:from-pink-400 hover:to-yellow-400 overflow-hidden">
-                    <div className='font-semibold text-white px-2 whitespace-nowrap'>
+                {/* <div class="md:hidden bg-gradient-to-r relative z-50 from-indigo-400 to-cyan-400 py-[2px] hover:from-pink-400 hover:to-yellow-400 overflow-hidden"> */}
+                    {/* <div className='font-semibold text-white px-2 whitespace-nowrap'>
                         <Swiper
                             slidesPerView={1}
                             speed={2000}
@@ -72,8 +72,8 @@ export default function Header() {
                              ))}
 
                         </Swiper>
-                    </div>
-                </div>
+                    </div> */}
+                {/* </div> */}
                 <div className='line'></div>
                 <div className='flex'>
                     <div className="flex flex-1 m-auto relative z-10 bg-white w-[100%] h-[2.5rem] " >

@@ -33,7 +33,7 @@
 .chevron2 {
     scale: 1.2;
     transition: all .5s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .chevron1 {
