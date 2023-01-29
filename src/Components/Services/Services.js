@@ -26,7 +26,7 @@ const Services = () => {
 
     <div className="">
       <div className='py-10 bg-gradient-to-r from-sky-500 to-indigo-500 text-center flex justify-center items-center'>
-        <div className="mx-4 text-center lg:text-4xl md:text-3xl text-xl font-semibold text-white whitespace-nowrap">Our Services makes customer Happy!</div>
+        <div className="mx-4 text-center lg:text-4xl md:text-3xl text-xl font-bold hover:text-white cursor-pointer text-[#e9e9d4] ">Our Services makes customer Happy!</div>
       </div>
 
       <div className="sm:m-1 m-0 ">
@@ -63,9 +63,9 @@ const Services = () => {
                       <div className="flex gap-2"><FastForward/>Fast</div>
                       <div className="flex gap-2"><Dashboard/>Customisable</div>
                     </div>
-                    <div className="font-semibold text-xl flex flex-1 gap-2 my-2">
-                      <div className="my-auto">Customer rating : {items.rating}</div>
-                      <div className="flex gap-1 text-yellow-500 my-auto">
+                    <div className="font-semibold whitespace-nowrap text-xl flex items-end md:gap-2 gap-1 md:mt-4">
+                      <div className="">Customer rating : {items.rating}</div>
+                      <div className="flex gap-1 my-auto text-yellow-500">
                         <Rating name="read-only" value={items.rating} readOnly />
                       </div>
 

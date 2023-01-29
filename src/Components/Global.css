@@ -83,5 +83,12 @@
     
 }
 
+@media (min-width : 300px ) {
+   .swiper-scrollbar {
+    margin-top: 1rem;
+} 
+}
+
+
 
 

@@ -29,14 +29,9 @@ export default function Faq() {
         id: 4
     },
     {
-        title: "Who will paint my house?",
-        discription: "We have a panel of contractors and painters with the service providers, who are trained by us with respect to our product range. The painters are trained to ensure that the correct application procedures are followed. They are also trained in textures and specialty paint finishes.",
-        id: 5
-    },
-    {
         title: "After the painting work is over, will My dream Paints Safe Painting Service be clean up my house?",
         discription: "Yes, we do the post-painting clean up for your home and leave your home clean, sanitized and beautifully painted.",
-        id: 6
+        id: 5
     },
     {
         title: "What are the features of My dream Paints Safe Painting Service?",
@@ -48,7 +43,7 @@ export default function Faq() {
             { i: "- Complete site sanitization" },
             { i: "- Asian Paints product warranty" }],
 
-        id: 7
+        id: 6
     },
     {
         title: "What are the benefits of My dream Paints Safe Painting Service?",
@@ -61,7 +56,7 @@ export default function Faq() {
                 { i: "- Access to some of the industry’s best products for wallpapers and textures" },
                 { i: "- Expert painters who provide a superior finish" }],
 
-        id: 8
+        id: 7
     },
     {
         title: "Which type of paint is best for interior walls in India?",
@@ -74,32 +69,22 @@ export default function Faq() {
                 { i: "- Rest assured whichever be the product you choose;  Interior Emulsions will be available in a wide range of colours." },
           ],
 
-        id: 9
-    },
-    {
-        title: "What are the types of interior paints?",
-        discription: "Various types of paints are available for interiors, such as interior emulsions, acrylic distemper, synthetic distempers and interior enamel paint. Interior emulsions are generally categorised based on properties like stain resistance, ease of cleaning, sheen levels etc. Distempers are more conservative form of paint and has lesser durability than emulsions. Enamel paints are generally used for painting of wood and metal surfaces.",
-        id: 10
+        id: 8
     },
     {
         title: "How long does interior paint last on the wall?",
         discription: "Several factors decide how long the interior paint will last. These include the quality of interior paint used, the system of application followed, the level of abuse it has been exposed to and also the general upkeep and maintenance of the wall. A good quality emulsion, applied following the correct system should last between five to seven years. Indigo Paints offers a range of interior emulsions that have a smooth finish and is easy to wash and maintain.",
-        id: 11
-    },
-    {
-        title: "Should the ceiling be painted the same colour as the walls?",
-        discription: "It is common to paint the ceiling in pure, brilliant white to create a feeling of generous space. However, contemporary designs do not conform to this thought and use the same shade for walls and ceilings to create a uniform look for the room.",
-        id: 12
+        id: 9
     },
     {
         title: "Will My dream Paints Safe Painting Service assist me in shifting and covering furniture before painting starts?",
         discription: "We cover the floor, furniture, doors, windows, cupboards, etc., with masking sheets, before we start painting to prevent any damage during the painting process. Our team also helps you shift the furniture.",
-        id: 13
+        id: 10
     }
     ])
 
     return (
-        <div className=''>
+        <div className='pb-10 md:pb-20'>
         <div className='mx-2'>
             {data.map((items) => (
                 <div key={items.id}>

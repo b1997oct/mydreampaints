@@ -20,22 +20,22 @@ export const itemsList = [
     location:"Hassan"
   },
   {
-    name: "service4",
+    name: "Here Shrinivas What saying",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
+    "All team members ere highly skilled. The suggestion of colours and wallpapers matched our expectation. We thank My dream painting service for the excellent work done at our house",
     image: Idli,
     rating: 5,
     bg:"bg-gradient-to-r from-yellow-500 to-yellow-300",
     location:"tumkur",
   },
   {
-    name: "service1",
+    name: "Niranjan bathi Office wall Painting",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
+    "I conduct many online meetings, so i needed a quick makeover for my office's wall. My dream Painting services team done a good job in painting of my office walls. Im completely satisfied with their service provided",
     image: i3,
     rating: 4.8,
     bg:"bg-gradient-to-r from-orange-500 to-rose-500",
-    location:"Chikamanglore"
+    location:"Banglore"
   },
   {
     name: "CONSTRUCTION SOLUTIONS",
@@ -44,13 +44,13 @@ export const itemsList = [
     image: Gujrati,
     rating: 5,
     bg:"bg-gray-600",
-    location:"Chikkanayakana hally",
+    location:"Chithradurga",
     font: "text-white"
   },
   {
-    name: "service3",
+    name: "Here is What Jayashree says",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
+      "The execution of the My dream Paints Safe Painting services is as agreed to. The supervision was done well & their team work was applausable They suggest really soothing colours schemess that worked well",
     image: Masalai3,
     rating: 4.2,
     bg:"bg-gray-500 ",
@@ -58,27 +58,27 @@ export const itemsList = [
     font: "text-white"
   },
   {
-    name: "service2",
+    name: "Vidya Shivaraj House Painitng",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
+      "Thanks to the My dream Painting Services team for all help and supervision. The associate the team was very professional and knew their job well. We found that the team is very expirenced and generous with helping nature.",
     image: Chola,
     rating: 4.7,
     bg:"bg-gradient-to-r from-indigo-200 to-cyan-400",
     location:"tumkur"
   },
   {
-    name: "service9",
+    name: "Rakesh Bhat terrace proofing",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
+      "We chose My dream Paints for proofing of our terrace. They informed us regularly regarding the next steps took feedbacks and cleaned the premises before leaving everyday. The entire job done with in the timeline promised",
     image: i1,
     rating: 4.4,
     bg:"bg-gray-400",
-    location:"banglore"
+    location:"Chikamanglore"
   },
   {
-    name: "service10",
+    name: "Nayana ramesh Building Re-Painting",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
+    "The team did a remarkble job. I am extreamly happy with the outcome. The team was patient and the highly professional. I would like to express my satisfaction for the work completed by My dream Paints",
     image: i12,
     rating: 4.5,
     bg:"bg-blue-500",
@@ -86,9 +86,9 @@ export const itemsList = [
     font: "text-white"
   },
   {
-    name: "service10",
+    name: "Ganesh's House painting Project review",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
+    "im ganesh i did the good job in giving the painting of my house to My dream Paints Painting service because the team is very skilled and well trained in field work and the work is done with in the desided time and date thats all i wanted",
     image: i14,
     rating: 5,
     bg:"bg-gray-500",

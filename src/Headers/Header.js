@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import "./header.css"
-import { Squeeze as Hamburger } from 'hamburger-react'
+import { Divide as Hamburger } from 'hamburger-react'
 import logo from "../Assets/logo.png"
 import React, { useState } from 'react'
 import { FaHome, FaList, FaPaintRoller, FaPhone, FaSearch, FaTools, FaWarehouse } from "react-icons/fa"
@@ -82,7 +82,7 @@ export default function Header() {
                                 <div className='h-10 w-10 '>
                                     <img src={logo} alt="logo" className="mt-1 scale-[2] md:scale-[2.6]" />
                                 </div>
-                                <h className="whitespace-nowrap my-auto md:ml-2 font-semibold lg:text-xl text-xl sm:text-sm">My Dream Paint</h>
+                                <h className="whitespace-nowrap my-auto md:ml-2 font-semibold lg:text-xl text-xl sm:text-sm">My Dream Paints</h>
                             </div>
                         </div>
                     </div>

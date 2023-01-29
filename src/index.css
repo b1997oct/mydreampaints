@@ -12,3 +12,8 @@ body {
 .f-cards {
   @apply rounded-3xl
 }
+
+.up-move {
+  @apply hover:translate-y-[-.8rem] hover:drop-shadow-xl transition-all ;
+
+}
