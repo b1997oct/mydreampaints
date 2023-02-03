@@ -30,6 +30,15 @@ import pd2 from "../../Assets/pd2.png"
 import pd3 from "../../Assets/pd3.png"
 import pd4 from "../../Assets/pd4.png"
 import Modal from '@mui/material/Modal';
+import img2 from "../../Assets/img2.jpg"
+import img3 from "../../Assets/img3.jpg"
+import img4 from "../../Assets/img4.jpg"
+import shield from "../../Assets/shield.gif"
+import tree from "../../Assets/tree.gif"
+import eco from "../../Assets/eco.gif"
+import armchair from "../../Assets/armchair.gif"
+import roller from "../../Assets/paint-roller.gif"
+import timer from "../../Assets/timer.gif"
 
 
 
@@ -46,11 +55,17 @@ function Home() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
+    // var slides = [
+    //     { image: image1, id: 1 },
+    //     { image: image2, id: 2 },
+    //     { image: image3, id: 3 },
+    //     { image: image4, id: 4 },
+    // ]
     var slides = [
         { image: image1, id: 1 },
-        { image: image2, id: 2 },
-        { image: image3, id: 3 },
-        { image: image4, id: 4 },
+        { image: img2, id: 2 },
+        { image: img3, id: 3 },
+        { image: img4, id: 4 },
     ]
 
     var data = [
@@ -91,10 +106,9 @@ function Home() {
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        overflowY: "scroll",
+        overflowY: "hidden",
         bgcolor: "background.paper",
         borderRadius: "10px",
-        boxShadow: 24,
         p: 4,
     };
 
@@ -117,7 +131,7 @@ function Home() {
                 >
                     {slides.map((data) => (
                         <SwiperSlide key={data.id}>
-                            <div className="md:h-[90vh]">
+                            <div className="lg:h-[91vh]">
                                 <img src={data.image} alt="img1"
                                     className="w-full h-full"
                                 />
@@ -189,25 +203,22 @@ function Home() {
                 open={open}
                 onClose={handleClose}
                 closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                    timeout: 500,
-                }}
+                // BackdropComponent={Backdrop}
+                // BackdropProps={{
+                //     timeout: 500,
+                // }}
             >
-                <Fade in={open}>
                     <Box
                         sx={style}
-                        className="w-[370px] sm:w-[500px] md:w-[700px] h-[30rem] overflow-hidden"
+                        className="w-[95vw]  sm:w-[500px] md:w-[700px] sm:h-[30rem] overflow-hidden"
                     >
                         {/* back */}
                         <div
                             className="bg-white flex items-center justify-start"
-                            onClick={() => {
-                                handleClose();
-                            }}
+                            onClick={handleClose}
                         >
                             <Button className="flex" variant="text">
-                                <ArrowBackIosNewSharp />Back
+                                <ArrowBackIosNewSharp className="scale-75" />Back
                             </Button>
                         </div>
                         {data.filter((data)=> {return active === data.id}).map((data) => (
@@ -215,14 +226,14 @@ function Home() {
                               <div className="mx-auto w-20 h-20">
                             <img src={data.image} alt="i1" className="w-full h-full" />
                             </div>
-                            <div className="text-center text-xl md:text-2xl lg:text-3xl">
-                            <h4 className=" text-2xl md:text-3xl">{data.title}</h4>
+                            <div className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                            <h4 className="text-xl sm:text-2xl md:text-3xl">{data.title}</h4>
                                 <p className="text-center">{data.discription}</p>
                             </div>
+
                         </div>
                         ))}
                     </Box>
-                </Fade>
             </Modal>
 
 
@@ -246,23 +257,26 @@ function Home() {
                         <div className="col-lg-3 bg-gray-100 drop-shadow-md rounded-lg py-4 up-move">
                             <div className="mb-5">
                                 <div className="flex justify-center p-2 bg-white rounded-full">
-                                    <FormatPaintSharp className="scale-125 text-orange-500" />
+                                    {/* <FormatPaintSharp className="scale-125 text-orange-500" /> */}
+                                    <img src={roller} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
                                 </div>
-                                <h className="p-1 font-semibold text-start text-xl text-orange-500">Expert Color Consultancy</h>
+                                <h className="p-1 font-semibold text-start text-xl text-red-400">Expert Color Consultancy</h>
                                 <p className="mb-0  p-1 font-semibold text-justify">Our experts help choose color palettes that suit your preference . Get free color previews before getting actual painting!</p>
                             </div>
                             <div className="">
                                 <div className="flex justify-center bg-white p-2 rounded-full">
-                                    <FaTree className="scale-150 text-green-400 my-1" />
+                                    {/* <FaTree className="scale-150 text-green-400 my-1" /> */}
+                                    <img src={tree} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
                                 </div>
-                                <h className="p-1 font-semibold text-start text-xl text-green-400">Hygienic and Dust Free Process</h>
+                                <h className="p-1 font-semibold text-start text-xl text-green-500">Hygienic and Dust Free Process</h>
                                 <p className="mb-0  p-1 font-semibold text-justify">We use high tech machines to ensure a dust-free and safe home makeover.</p>
                             </div>
                         </div>
                         <div className="col-lg-6 ">
                             <div className="bg-gray-50 drop-shadow-md up-move rounded-lg py-10 md:px-5 px-2 text-center lg:mt-16">
-                                <SafetyCheckTwoTone className="scale-[3] mb-4 text-green-500" />
-                                <h4 className="text-green-700">Procare & Safety</h4>
+                                {/* <SafetyCheckTwoTone className="scale-[3] mb-4 text-green-500" /> */}
+                                <img src={shield} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
+                                <h4 className="text-teal-400">Procare & Safety</h4>
                                 <div className="font-semibold text-justify">Your Safety is our first priority. Our team and applicators are vaccinated and ensure hygienic service delivery. Our core focus is on green technology. We make and sell paints that are not only technologically advanced but also environment friendly.</div>
                                 {/* <img className="img-fluid" src="img/feature.png" alt=""> */}
                                 <Button className="bg-blue-500  hover:shadow-lg hover:shadow-blue-500 px-2 m-1" size="sm"
@@ -273,23 +287,26 @@ function Home() {
                         <div className="col-lg-3 bg-gray-100 drop-shadow-md rounded-lg up-move py-4">
                             <div className="mb-5">
                                 <div className="flex justify-center bg-white p-2 rounded-full">
-                                    <TimerSharp className="scale-150 text-gray-500" />
+                                    {/* <TimerSharp className="scale-150 text-gray-500" /> */}
+                                    <img src={timer} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
                                 </div>
-                                <h className="p-1 font-semibold text-start text-xl text-gray-500">Supervision & On Time Completion</h>
+                                <h className="p-1 font-semibold text-start text-xl text-indigo-500">Supervision & On Time Completion</h>
                                 <p className="mb-0  p-1 font-semibold text-justify">We work on your schedule, supervise and plan execution to make sure that we complete on-time.</p>
                             </div>
                             <div className="">
                                 <div className="flex justify-center bg-white p-[.7rem] rounded-full">
-                                    <FaHandshake className="scale-[2.5] text-sky-500" />
+                                    {/* <FaHandshake className="scale-[2.5] text-sky-500" /> */}
+                                    <img src={armchair} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
+
                                 </div>
-                                <h className="p-1 font-semibold text-start text-xl text-sky-500">Protection of furniture</h>
+                                <h className="p-1 font-semibold text-start text-xl text-teal-500">Protection of furniture</h>
                                 <p className="mb-0 p-1 font-semibold text-justify">We secure and shift all your goods with the utmost care.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="mx-[4px] md:mx-4 border-2 border-gray-300 p-5 rounded-md">
+            <div className="mx-[4px] md:mx-4 border-2 border-gray-700 p-5 rounded-md">
                 <div className="text-center flex justify-center flex-col md:flex-row text-xl md:text-3xl font-semibold">
                     To paint your home, please give us a call at.
                     <div className="flex mx-[auto] md:mx-0">
@@ -304,14 +321,14 @@ function Home() {
 
             </div>
 
-            {/* <div>
+            <div>
                 <div className="flex flex-wrap bg-white mt-4 md:px-4 md:py-10">
                     <div className="flex p-2 md:border-r-0 border-r-[1px] text-center justify-center md:border-b-0 border-b-[1px] border-gray-400 flex-col gap-2 items-center md:gap-4 w-1/2 lg:w-1/4">
                         <img src={pd1}
                             className="w-16 h-16"
                             alt="pd1" />
                         <div className="font-bold p-2 text-[#211d0b] text-lg md:text-xl">900+ COLOURS</div>
-                        <div className="text-center text-lg text-gray-500 md:w-52">Available in 900+ colours including 12 bright factory-made shades.</div>
+                        <div className="text-center text-lg text-gray-500 md:w-52">Available in 900+ colours including all rainbow colours and shades.</div>
                     </div>
                     <div className="flex md:border-b-0 border-b-[1px] justify-evenly border-gray-400 flex-col gap-2 items-center md:gap-4 w-1/2 lg:w-1/4">
                         <img src={pd2}
@@ -325,21 +342,21 @@ function Home() {
                             className="w-14 h-14"
                             alt="pd3" />
                         <div className="font-bold text-[#211d0b] text-lg md:text-xl">FINISH</div>
-                        <div className="text-center text-lg text-gray-500 md:w-52">Formulated to provide beautiful, smooth finish that lasts longer than distempers.</div>
+                        <div className="text-center text-lg text-gray-500 md:w-52">Formulated to provide beautiful, smooth finish that remains longer and safe to environment.</div>
                     </div>
                     <div className="flex p-2 justify-center flex-col gap-2 items-center md:gap-4 w-1/2 lg:w-1/4">
                         <img src={pd4}
                             className="w-16 h-16"
                             alt="pd4" />
                         <div className="font-bold text-[#211d0b] text-lg md:text-xl">AFFORDABLE</div>
-                        <div className="text-center text-lg text-gray-500 md:w-52">An affordable yet long lasting paint for interior walls of your house.</div>
+                        <div className="text-center text-lg text-gray-500 md:w-52">An affordable yet long lasting paint for interior and exterior walls of your house.</div>
                     </div>
 
                 </div>
                 <div className="flex justify-center py-4">
                     <Button size="sm" variant="filled" className="bg-[#15c5fb] hover:shadow-lg hover:shadow-[#15c5fb]" onClick={() => navigate("/products")} >CHECKOUT PRODUCTS</Button>
                 </div>
-            </div> */}
+            </div>
 
             <div className="">
                 <Divider className="bg-gray-900 h-[2px] my-4" />

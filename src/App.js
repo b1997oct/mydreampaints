@@ -20,7 +20,7 @@ function App() {
 
     // bg-[#E1F2F7]
 
-    <div className='bg-gradient-to-tr from-gray-100 to-blue-100'>
+    <div className='bg-gradient-to-tl from-orange-300 to-[#f2f5c1]'>
       {/*  */}
       <Header />
       <CallMe />

@@ -25,17 +25,13 @@ const Services = () => {
   return (
 
     <div className="">
-      <div className='py-10 bg-gradient-to-r from-sky-500 to-indigo-500 text-center flex justify-center items-center'>
-        <div className="mx-4 text-center lg:text-4xl md:text-3xl text-xl font-bold hover:text-white cursor-pointer text-[#e9e9d4] ">Our Services makes customer Happy!</div>
+      <div className='py-10 bg-gradient-to-tl from-[#ebc553f3] to-yellow-300 via-rose-500 text-center flex justify-center items-center hover:sm:animate-none'>
+        <div className="mx-4 text-center lg:text-4xl md:text-3xl text-xl font-bold hover:text-[#e9e9d4] cursor-pointer text-white animate-bounce ">Our Services makes customer Happy!</div>
       </div>
 
       <div className="sm:m-1 m-0 ">
-        {/* <div className="m-8 text-justify lg:text-2xl md:text-xl sm:text-md text-lg font-semibold ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus consequatur magni ratione facere rerum sunt, voluptatem quidem! Nam sapiente libero quisquam ratione fugit cum quos aliquid possimus consequatur magnam!</div> */}
         <Box className="flex flex-wrap mt-6 md:mt-0">
           {itemsList.map((items) => (
-            // if (count%2 === 1) {
-
-            // } 
             <Card className="w-full m-[2%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
               <CardActionArea>
                 <div className="flex flex-col md:flex-row md:h-[30rem]">

@@ -44,8 +44,6 @@
 }
 
 .cont-form {
-    display: flex;
-    flex-direction: column;
     gap: .5rem;
     margin: 1.5rem;
     max-width: 500px;
@@ -87,6 +85,20 @@
    .swiper-scrollbar {
     margin-top: 1rem;
 } 
+
+
+}
+
+.contact-div {
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.03) 0%, rgba(217, 217, 217, 0.06) 100%);
+}
+
+.css-440q0::after {
+    border-bottom: 2px solid white;
+}
+
+.css-440q0.Mui-focused::after {
+    transform: scale(1) translate(0px);
 }
 
 

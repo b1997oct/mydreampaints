@@ -54,7 +54,7 @@ function FeatureProducts() {
         >
           {itemsList.map((items) => (
             <SwiperSlide key={items.id}
-              className="bg-[#ffc518] w-full hover:shadow-xl"
+              className="bg-gradient-to-tl from-[#ebc553f3] to-orange-300 via-rose-500 w-full hover:shadow-xl"
             >
               <div className='gap-2'>
                 <div className='flex w-[100%] h-[25rem]'>
@@ -68,7 +68,7 @@ function FeatureProducts() {
                   <h3 className='mt-2 font-bold text-white'>
                     {items.name}
                   </h3>
-                  <div className='font-semibold lg:mx-4 text-left'>
+                  <div className='font-semibold text-white lg:mx-4 text-left'>
                     {items.description}
                   </div>
                   {/* <div>
@@ -80,13 +80,13 @@ function FeatureProducts() {
 
           ))}
           <SwiperSlide
-            className="bg-white w-24"
+            className="bg-gradient-to-tl from-indigo-300 to-indigo-300 via-pink-500 w-24"
           ><div className='h-[26rem]'>
               <img src={feature_product}
                 className="h-full w-full"
                 alt="fetured_product" />
             </div>
-            <div className='p-2'>
+            <div className='p-2 text-white'>
               <h3>
                 Call for any Quiers
               </h3>
@@ -94,7 +94,7 @@ function FeatureProducts() {
                 Take a easy and right way for painting houses, buildings or any constructions because painting is done once
               </div>
             </div>
-            <div className='grid place-items-center'>
+            <div className='grid place-items-center text-white'>
               <h1>+91 9482658028</h1>
             </div>
           </SwiperSlide>

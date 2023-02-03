@@ -34,7 +34,7 @@ const Products = () => {
 
         <Box className="flex flex-wrap mt-8">
           {itemsList.map((items) => (
-            <Card className="w-[100%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
+            <Card className="w-[100%] md:mb-24 mb-12 mx-1 md:mx-0 drop-shadow-xl shadow-gray-600">
               <CardActionArea>
                 <div className="flex flex-col md:flex-row">
                   <div className={`md:w-1/2 py-4 grid place-items-center ${items.bg}`}>
@@ -49,7 +49,7 @@ const Products = () => {
                   </div>
                   <CardContent className="bg-[#391650] flex flex-col justify-around rounded-md flex-1 text-white">
                     <div className="flex flex-col">
-                      <h3 className={`md:text-4xl font-bold`} >
+                      <h3 className={`md:text-4xl font-bold uppercase`} >
                         {items.name}
                       </h3>
                     </div>

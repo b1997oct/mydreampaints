@@ -43,7 +43,7 @@ export const itemsList = [
     "My dream paints provides you a range of state-of-the-art construction solutions that can protect your home for longer. We bring you a wide array of products and services. Our products include Cleanwall, Crackseal, Wall+, Stylfix and Aquasil.",
     image: Gujrati,
     rating: 5,
-    bg:"bg-gray-600",
+    bg:"bg-[#7f4910]",
     location:"Chithradurga",
     font: "text-white"
   },
@@ -53,7 +53,7 @@ export const itemsList = [
       "The execution of the My dream Paints Safe Painting services is as agreed to. The supervision was done well & their team work was applausable They suggest really soothing colours schemess that worked well",
     image: Masalai3,
     rating: 4.2,
-    bg:"bg-gray-500 ",
+    bg:"bg-gray-600 ",
     location:"Arasikere",
     font: "text-white"
   },
