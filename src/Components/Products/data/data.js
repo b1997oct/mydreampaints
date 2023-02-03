@@ -69,26 +69,26 @@ export const itemsList = [
     name: "My Dream Distemper Paint",
     description:
       "The perfect economy emulsion with advanced features and an easy way to upgrade from distempers. It gives higher coverage than distemper and lasts for at least 2-3 years.",
-    image: p14,
+    image: p15,
     features: [
-      { i: "SHEEN FINISH" },
+      { i: "ADVANCED STAIN GUARD"},
       { i: "LUXURIOUS HIGH SHINER" },
       { i: "LONG LASTING PAINT" }
     ],
     rating: 4.7,
   },
-  {
-    name: "Interior Primer Parret",
-    description:
-      "The perfect pick to add a dash of glamour on your walls. The higher sheen and stunning smooth finish make your home beam with luxury.",
-    image: p15,
-    features: [
-      { i: "ADVANCED STAIN GUARD" },
-      { i: "SHINER FINISH" },
-      { i: "LONG LASTING PAINT" }
-    ],
-    rating: 4.6,
-  },
+  // {
+  //   name: "Interior Primer Parret",
+  //   description:
+  //     "The perfect pick to add a dash of glamour on your walls. The higher sheen and stunning smooth finish make your home beam with luxury.",
+  //   image: p15,
+  //   features: [
+  //     { i: "ADVANCED STAIN GUARD" },
+  //     { i: "SHINER FINISH" },
+  //     { i: "LONG LASTING PAINT" }
+  //   ],
+  //   rating: 4.6,
+  // },
   {
     name: "MY DREAM INTERIOR EMULSION SHYNE",
     description:
