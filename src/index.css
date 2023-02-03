@@ -13,7 +13,9 @@ body {
   @apply rounded-3xl
 }
 
-.up-move {
-  @apply hover:translate-y-[-.8rem] hover:drop-shadow-xl transition-all ;
-
+@media (min-width :1024px ) {
+  .up-move {
+    @apply hover:translate-y-[-.8rem] hover:drop-shadow-xl transition-all ;
+  
+  }
 }
