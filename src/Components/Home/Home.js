@@ -6,29 +6,20 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./home.css";
 import "swiper/css/scrollbar";
-// import 'swiper/swiper-bundle.css';
 import painting from "../../Assets/painting.jpg"
 import FeatureProducts from '../Utils/FeatureProducts';
-import { ArrowBack, ArrowBackIosNewSharp, FormatPaintSharp, SafetyCheckTwoTone, Timer, Timer10, TimerRounded, TimerSharp } from "@mui/icons-material";
-import { FaHandshake, FaTree } from "react-icons/fa";
+import {ArrowBackIosNewSharp, WhatsApp } from "@mui/icons-material";
+
 import Faq from "../Store/Faq"
 import i1 from "../../Assets/i1.png"
 import i2 from "../../Assets/i2.png"
 import i3 from "../../Assets/i3.png"
 import i4 from "../../Assets/i4.png"
 import i5 from "../../Assets/i5.png"
-import phone from "../../Assets/phone.png"
-import { Backdrop, Box, Divider, Fade, Typography } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { SwiperSlide, Swiper } from "swiper/react";
 import image1 from "../../Assets/image1.jpg"
-import image2 from "../../Assets/image2.jpg"
-import image3 from "../../Assets/image3.jpg"
-import image4 from "../../Assets/image4.jpg"
-import pd1 from "../../Assets/pd1.png"
-import pd2 from "../../Assets/pd2.png"
-import pd3 from "../../Assets/pd3.png"
-import pd4 from "../../Assets/pd4.png"
 import Modal from '@mui/material/Modal';
 import img2 from "../../Assets/img2.jpg"
 import img3 from "../../Assets/img3.jpg"
@@ -55,12 +46,6 @@ function Home() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    // var slides = [
-    //     { image: image1, id: 1 },
-    //     { image: image2, id: 2 },
-    //     { image: image3, id: 3 },
-    //     { image: image4, id: 4 },
-    // ]
     var slides = [
         { image: image1, id: 1 },
         { image: img2, id: 2 },
@@ -73,7 +58,7 @@ function Home() {
             id: 1,
             image: i1,
             title: "On Time Completion",
-            discription: "My dream paint promise you the completion of project in time if in case any emergency iterruptions occurs then we'll info you before but most of the time our projects complete in time"
+            discription: "My dream paint promise you the completion of project in time if in case any emergency iterruptions occurs then we'll info you before but most of the time our projects complete in time."
         },
         {
             id : 2,
@@ -111,6 +96,7 @@ function Home() {
         borderRadius: "10px",
         p: 4,
     };
+
 
     return (
         <div>
@@ -153,7 +139,7 @@ function Home() {
                             <div className="overflow-hidden justify-center m-auto ">
                                 <img src={painting} alt="Paint" className="" />
                             </div>
-                            <Button className="bg-yellow-400 text-black hover:shadow-md hover:shadow-[#f0ea39f9] px-2 my-[1.5rem] md:my-2 mx-1" size="sm"
+                            <Button className="px-2 my-[1.5rem] hover:shadow-lg hover:shadow-blue-500 md:my-2 mx-1" size="sm"
                                 onClick={() => navigate("/services")}
                             >SERVICES</Button>
                         </div>
@@ -306,22 +292,19 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="mx-[4px] md:mx-4 border-2 border-gray-700 p-5 rounded-md">
-                <div className="text-center flex justify-center flex-col md:flex-row text-xl md:text-3xl font-semibold">
-                    To paint your home, please give us a call at.
+            <div className="mx-[4px] md:mx-4 border-2 border-gray-600 p-4 rounded-md">
+                <div className="text-center flex gap-2 justify-center flex-col md:flex-row text-xl md:text-3xl font-semibold">
+                    Facing any Problems in Painting, Say Hi on WhatsApp
                     <div className="flex mx-[auto] md:mx-0">
-                        <div className="w-0 sm:w-8 h-8 my-[auto]">
-                            <img src={phone} alt="phone" className="w-full h-full" />
-                        </div>
                         <div className="font-bold md:text-4xl text-3xl truncate">
-                            +91 9482658028
+                            9482658028
                         </div>
                     </div>
                 </div>
-
+                <a target="_blank" className="no-underline" href="https://wa.me/message/ASOK2XATB4ENJ1"><div className="mt-4 text-2xl flex justify-center font-semibold"><Button className="flex justify-center bg-green-400 p-2 gap-2 items-center"><WhatsApp className="text-2xl scale-[1.5]" />WhatsApp</Button></div></a>
             </div>
 
-            <div>
+            {/* <div>
                 <div className="flex flex-wrap bg-white mt-4 md:px-4 md:py-10">
                     <div className="flex p-2 md:border-r-0 border-r-[1px] text-center justify-center md:border-b-0 border-b-[1px] border-gray-400 flex-col gap-2 items-center md:gap-4 w-1/2 lg:w-1/4">
                         <img src={pd1}
@@ -356,7 +339,7 @@ function Home() {
                 <div className="flex justify-center py-4">
                     <Button size="sm" variant="filled" className="bg-[#15c5fb] hover:shadow-lg hover:shadow-[#15c5fb]" onClick={() => navigate("/products")} >CHECKOUT PRODUCTS</Button>
                 </div>
-            </div>
+            </div> */}
 
             <div className="">
                 <Divider className="bg-gray-900 h-[2px] my-4" />

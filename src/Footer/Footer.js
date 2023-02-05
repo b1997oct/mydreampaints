@@ -28,28 +28,6 @@ function Footer() {
             </ul>
           <p className='m-4'>Mathighatta, Tumkur, Karnataka - 572119</p>
         </div>
-        {/* <div className="m-4">
-          <div className="single-box md:max-w-[20rem]">
-            <div className='flex justify-center'>
-              <div className='h-10 w-10'>
-                <img src={logo} alt="logo" className="scale-[2] md:scale-[2.6]" />
-              </div>
-              <h2 className='md:ml-8 ml-6'>Get In Touch</h2></div>
-
-            <p className=' text-justify'>My dream Paint produces high-quality paints with innovation and eco-friendliness. We consistently deliver paint solutions that not only serve your needs, but also protect the world we live in.</p>
-          </div>
-        </div> */}
-
-        {/* <div className='grid justify-center m-4 min-w-[130px]'>
-          <p className='font-bold text-lg mb-0'>Quick Links</p>
-          <ul className='list-none ml-[-1rem] text-lg font-semibold' >
-            <Link to="/" className="w-[100%] bg-white"><li>Home</li></Link>
-            <Link to="/products" className="w-[100%]"><li>Products</li></Link>
-            <Link to="/tools" className="w-[100%]"><li>Tools</li></Link>
-            <Link to="/services" className="w-[100%]"><li>Services</li></Link>
-            <Link to="/contact" className="w-[100%]"><li>Contact Us</li></Link>
-          </ul>
-        </div> */}
         <div className="text-white items-center justify-center flex flex-col ">
           <h2>Suport</h2>
           <h2>24*7</h2>

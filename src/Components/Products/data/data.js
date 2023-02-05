@@ -20,7 +20,7 @@ import p17 from "../images/p17.jpg";
 
 export const itemsList = [
   {
-    name: "MY DREAM EMULSION SHYNE",
+    name: "MY DREAM INTERIOR PREMIYER",
     description:
       "Shield your walls for years to come with a washable paint that acts like a protective armour against fungus and unwanted stains.",
     image: p1,
@@ -33,19 +33,19 @@ export const itemsList = [
     rating: 4.5,
     bg: ""
   },
-  {
-    name: "MY DREAM ADVANCED EXTERIOR PAINT",
-    description:
-      "The smarter and affordable choice, if you were previously using distempers. It offers the finish of plastic paint, at a cost that is not too different from distemper.",
-    image: p3,
-    features: [
-      { i: "HIGH WASHABILITY" },
-      { i: "RICH TEXTURE FINISH" },
-      { i: "FUNGUS RESISTANT" }
-    ],
-    rating: 4.5,
-    bg: ""
-  },
+  // {
+  //   name: "MY DREAM ADVANCED EXTERIOR PAINT",
+  //   description:
+  //     "The smarter and affordable choice, if you were previously using distempers. It offers the finish of plastic paint, at a cost that is not too different from distemper.",
+  //   image: p3,
+  //   features: [
+  //     { i: "HIGH WASHABILITY" },
+  //     { i: "RICH TEXTURE FINISH" },
+  //     { i: "FUNGUS RESISTANT" }
+  //   ],
+  //   rating: 4.5,
+  //   bg: ""
+  // },
   {
     name: "Acrylic wall putty",
     description:
@@ -89,22 +89,22 @@ export const itemsList = [
   //   ],
   //   rating: 4.6,
   // },
+  // {
+  //   name: "MY DREAM INTERIOR EMULSION SHYNE",
+  //   description:
+  //     "Shield your walls for years to come with a washable paint that acts like a protective armour against fungus and unwanted stains.",
+  //   image: p4,
+  //   features: [
+  //     { i: "ACTIVATED CARBON TECHNOLOGY" },
+  //     { i: "GREEN ASSURE" },
+  //     { i: "MOISTURE PROTECTION" },
+  //     { i: "AVAILABLE IN EXTRA DEEP COLOURS" }
+  //   ],
+  //   rating: 4.5,
+  //   bg: ""
+  // },
   {
-    name: "MY DREAM INTERIOR EMULSION SHYNE",
-    description:
-      "Shield your walls for years to come with a washable paint that acts like a protective armour against fungus and unwanted stains.",
-    image: p4,
-    features: [
-      { i: "ACTIVATED CARBON TECHNOLOGY" },
-      { i: "GREEN ASSURE" },
-      { i: "MOISTURE PROTECTION" },
-      { i: "AVAILABLE IN EXTRA DEEP COLOURS" }
-    ],
-    rating: 4.5,
-    bg: ""
-  },
-  {
-    name: "MY DREAM INTERIOR PREMIYER",
+    name: "MY DREAM EMULSION SHYNE",
     description:
       "The smarter and affordable choice, if you were previously using distempers. It offers the finish of plastic paint, at a cost that is not too different from distemper.",
     image: p5,
@@ -116,17 +116,17 @@ export const itemsList = [
     rating: 4.5,
     bg: ""
   },
-  {
-    name: "MY DREAM  INTERIOR PREMIYER",
-    description: "Watch the ageless beauty of this rich finish on your walls. This excellent washable paint lends an everlasting shyne to walls.",
-    image: p6,
-    features: [
-      { i: "SOFT SHINE FINISH" },
-      { i: "LONG LASTING PAINT" },
-      { i: "SMOOTHEST COATING FINISH" }
-    ],
-    rating: 4.5,
-  },
+  // {
+  //   name: "MY DREAM  INTERIOR PREMIYER",
+  //   description: "Watch the ageless beauty of this rich finish on your walls. This excellent washable paint lends an everlasting shyne to walls.",
+  //   image: p6,
+  //   features: [
+  //     { i: "SOFT SHINE FINISH" },
+  //     { i: "LONG LASTING PAINT" },
+  //     { i: "SMOOTHEST COATING FINISH" }
+  //   ],
+  //   rating: 4.5,
+  // },
   {
     name: "My Dream Interior Emulsion",
     description:
@@ -179,16 +179,17 @@ export const itemsList = [
     bg: "bg-orange-100"
   },
   {
-    name: "MY DREAM WATER PROOF",
+    name: "MY DREAM WATER PROOFS",
     description:
       "Paint your home with one of the best matt finishes. Equipped with Coating Surface Protection, it's more than just elegant, it's durable.",
-    image: p10,
+    image: p4,
     features: [
       { i: "BEST IN SMOOTHNESS" },
+      { i: "AVAILABLE IN 900+ SHADES" },
       { i: "UNMATCHED STAIN RESISTANCE" },
       { i: "SHINE & LIGHT REFLECTING FINISH" }
     ],
     rating: 4.5,
-    bg: "bg-green-100"
+    bg: "bg-white"
   },
 ];

@@ -1,4 +1,4 @@
-/* .swiper-pagination-bullets {
+.swiper-pagination-bullets {
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -67,4 +67,4 @@ div>.swiper-button-next {
     border-radius: 20px;
     transition: all ease-in-out;
   }
-} */
+}

@@ -2,12 +2,12 @@ import "./Global.css"
 import React, { useEffect, useState } from 'react';
 import Collapse from 'react-bootstrap/Collapse';
 import { FaChevronDown } from 'react-icons/fa'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
 import { Select, MenuItem, Divider, TextField } from "@mui/material"
 import congrats from "../Assets/congrats.png"
-import terms from "../Assets/Bresume.pdf"
 import { Facebook, Instagram, LocationOn, Mail, Phone, Pinterest, YouTube } from "@mui/icons-material";
+import { youtube,facebookPage,insagram,pinterest } from "../SocialLinks";
 
 
 function Contact() {
@@ -40,9 +40,6 @@ function Contact() {
 
     setActive(false)
 
-  }
-
-  function handleAlert() {
   }
 
   useEffect(() => {
@@ -80,13 +77,13 @@ function Contact() {
               <div className="grid gap-4">
                 <div className="flex gap-8"><Phone />+91 9482658028</div>
                 <div className="flex gap-8"><Mail />mydreampaintmgt@gmail.com</div>
-                <div className="flex gap-8"><LocationOn />Mathighatta, Tumkur, Karnataka - 572119</div>
+                <div className="flex gap-8"><LocationOn />Tiptur, Tumkur, Karnataka - 572119</div>
               </div>
               <div className="flex gap-3 mt-8">
-                <YouTube />
-                <Facebook />
-                <Instagram />
-                <Pinterest />
+                <a href={youtube} target="_blank"><YouTube className="cursor-pointer text-[#0e4371]" /></a>
+                <a href={facebookPage} target="_blank"><Facebook className="cursor-pointer text-[#0e4371]" /></a>
+                <a href={insagram} target="_blank"><Instagram className="cursor-pointer text-[#0e4371]" /></a>
+                <a href={pinterest} target="_blank"><Pinterest className="cursor-pointer text-[#0e4371]" /></a>
               </div>
               <div className="absolute z-9 w-52 h-52 bg-gradient-to-br to-indigo-600 from-green-500
                md:bottom-[-15%] md:right-[-15%] bottom-[-25%] right-[-20%] rounded-full"></div>
@@ -105,12 +102,10 @@ function Contact() {
                 <Select
                   InputLabelProps={{ className: "text-white" }}
                   variant="standard"
-                  // id="demo-simple-select"
                   color="secondary" size="small"
                   name="options"
                   value={values.options}
                   sx={{ color: "white" }}
-                  // label="Status your quiers"
                   onChange={handleChange}
                 >
                   <MenuItem disabled >Select your Asset stage</MenuItem>
@@ -120,7 +115,7 @@ function Contact() {
                 <TextField variant="standard" type="text" label="Message" placeholder="Any Message" InputLabelProps={{ className: "text-white" }}
                   name="message" color="warning" inputProps={{ className: "text-white" }} onChange={handleChange} />
                   </div>
-                <button className="bg-gradient-to-tl to-green-400 from-green-400 hover:shadow-lg hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg" type="submit" onClick={handleAlert} >Send Message</button>
+                <button className="bg-gradient-to-tl to-green-400 from-green-400 hover:shadow-lg hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg" type="submit" >Send Message</button>
               </form>
             </div>
           </div>
@@ -190,7 +185,7 @@ function Contact() {
             <Button variant="contained" size="sm" className="bg-green-500 w-full truncate hover:shadow-lg hover:shadow-green-500" onClick={() => setActive(true)}>Submit one more form</Button>
             <Button variant="contained" size="sm" className="w-full hover:shadow-lg hover:shadow-blue-500" onClick={() => navigate("/")} >Go to home page</Button>
           </div>
-          <div className="flex justify-center font-semibold gap-1 my-4">Read the<a href={terms} target="_blank" className="no-underline flex md:gap-1"><span className="text-blue-400 cursor-pointer">Term's</span><span className="text-black">&</span> <span className="text-blue-400 cursor-pointer">Conditions</span></a></div>
+          <div className="flex justify-center font-semibold gap-1 my-4">Read the<Link to="/terms-and-conditions" className="no-underline flex md:gap-1"><span className="text-blue-400 cursor-pointer">Term's</span><span className="text-black">&</span> <span className="text-blue-400 cursor-pointer">Conditions</span></Link></div>
         </div>
 
       }

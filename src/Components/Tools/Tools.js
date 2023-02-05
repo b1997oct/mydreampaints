@@ -6,6 +6,7 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  Rating,
   Typography,
 } from "@mui/material";
 import paintingtool from "./images/paintingtool.jpg"
@@ -27,13 +28,13 @@ const Tools = () => {
               alt="painting" />
           </div>
           <div className="lg:gap-10 text-[#1c1c14] gap-[.5rem] my-2 md:gap-4 text-xl grid lg:text-2xl md:w-1/2 mx-[auto] text-justify md:my-auto font-semibold">
-            <div className="bg-[#fff] shadow-sm p-4 rounded-xl up-move cursor-pointer">
+            <div className="bg-[#fff] shadow-sm p-4 rounded-xl lg:up-move cursor-pointer">
               <span className="font-bold">1.</span> No matter if you're new to painting or a experianced one thing is clear you have to have the right tools for the job
             </div>
-            <div className="bg-[#fff] shadow-sm md:py-10 p-[1rem] rounded-xl up-move cursor-pointer">
+            <div className="bg-[#fff] shadow-sm md:py-10 p-[1rem] rounded-xl lg:up-move cursor-pointer">
             <span className="font-bold">2.</span> The right painting tools can make your job easier, safer, and faster. They can even save you money.
             </div>
-            <div className="bg-[#fff] shadow-sm p-4 rounded-lg up-move cursor-pointer">
+            <div className="bg-[#fff] shadow-sm p-4 rounded-lg lg:up-move cursor-pointer">
             <span className="font-bold ">3.</span> That's why put together a list of the house painting tools and equipment that you need to have before starting your painting projects
             </div>
           </div>
@@ -57,9 +58,6 @@ const Tools = () => {
                   <div className="font-semibold text-2xl text-blue-700">
                     {menu.name}
                   </div>
-                  {/* <Typography variant="h6" gutterBottom component={"div"}>
-            rating : {menu.rating}
-            </Typography> */}
                 </div>
                 <Typography variant="body2">{menu.description}</Typography>
               </CardContent>

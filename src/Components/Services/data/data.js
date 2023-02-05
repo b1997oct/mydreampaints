@@ -40,7 +40,7 @@ export const itemsList = [
   {
     name: "CONSTRUCTION SOLUTIONS",
     description:
-    "My dream paints provides you a range of state-of-the-art construction solutions that can protect your home for longer. We bring you a wide array of products and services. Our products include Cleanwall, Crackseal, Wall+, Stylfix and Aquasil.",
+    "My dream paints provides you a range of state-of-the-art construction solutions that can protect your home for longer. We bring you a wide array of products and services. Our products include Cleanwall, Crackseal, Wall+, Emulsions and water proof paints",
     image: Gujrati,
     rating: 5,
     bg:"bg-[#7f4910]",

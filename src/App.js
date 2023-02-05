@@ -10,6 +10,7 @@ import Contact from './Components/Contact';
 import CallMe from './Components/Store/CallMe';
 import Admin from './Admin';
 import { Navigate } from 'react-router-dom';
+import Terms from './Policies/Terms';
 
 
 
@@ -18,10 +19,7 @@ function App() {
 
   return (
 
-    // bg-[#E1F2F7]
-
     <div className='bg-gradient-to-tl from-orange-300 to-[#f2f5c1]'>
-      {/*  */}
       <Header />
       <CallMe />
       <Routes>
@@ -31,6 +29,7 @@ function App() {
         <Route path='/tools' element={<Tools />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/admin' element={<Admin />} />
+        <Route path="/terms-and-conditions" element={<Terms/>} />
         <Route path='/' element={<Navigate replace to="/home" />} />
         <Route path='/*' element={<Page404 />} />
       </Routes>

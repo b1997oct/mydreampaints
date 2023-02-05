@@ -29,7 +29,7 @@ const Products = () => {
       <div className="">
         <div className='md:py-10 pt-10 text-center flex flex-col gap-4 justify-center items-center'>
           <div className="mx-4 text-justify lg:text-4xl md:text-3xl text-2xl font-bold text-[#13120c]">Our products</div>
-          <div className="text-center text-sm md:text-2xl leading-tight font-semibold w-[95%] md:w-[80%]">Find the best interior & exterior and water paints at My dream paints, and dress up your walls and ceilings in soft and gentle hues. Interior emulsions are water-based and easy to apply on the walls and ceilings. It is durable and, once applied, can last for a long time.</div>
+          <div className="text-center text-sm md:text-2xl leading-tight font-semibold w-[95%] md:w-[80%]">Find the best interior & exterior and water paints at My dream paints, and dress up your walls and ceilings with 900+ colours. Interior emulsions are water-based and easy to apply on the walls and ceilings. It is durable and, once applied, can last for a long time.</div>
         </div>
 
         <Box className="flex flex-wrap mt-8">
