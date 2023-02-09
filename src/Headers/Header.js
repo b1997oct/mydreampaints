@@ -18,20 +18,20 @@ export default function Header() {
 
     const navigate = useNavigate();
 
-    var swipers = [
-        {
-            title: "Happy New Year to All wish you best of luck...",
-            id: 1
-        },
-        {
-            title: "Mega offer on 2023 new year upto 50% Off...",
-            id: 2
-        },
-        {
-            title: "contact for any quires 24*7 custumer care",
-            id: 3
-        }
-    ]
+    // var swipers = [
+    //     {
+    //         title: "Happy New Year to All wish you best of luck...",
+    //         id: 1
+    //     },
+    //     {
+    //         title: "Mega offer on 2023 new year upto 50% Off...",
+    //         id: 2
+    //     },
+    //     {
+    //         title: "contact for any quires 24*7 custumer care",
+    //         id: 3
+    //     }
+    // ]
     // Hamburger toggle
 
     const navFun = () => {
