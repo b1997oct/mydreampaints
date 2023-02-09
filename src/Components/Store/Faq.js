@@ -49,7 +49,7 @@ export default function Faq() {
         },
         {
             title: "How can you register for My dream Paints Safe Painting Service ?",
-            discription: "You may contact us at Phone - +91 9482658028, anytime between 08:00 am to 08:00 pm, Monday to Sunday Email - mydreampaintmgt@gmail.com Or fill up the form on this page.",
+            discription: "You may contact us at Phone - +91 9482658028, anytime between 08:00 am to 08:00 pm, Monday to Sunday Email - mydreampaintsmgt@gmail.com Or fill up the form on this page.",
             id: 7
         },
         {
@@ -67,7 +67,7 @@ export default function Faq() {
         },
         {
             title: "How long does interior paint last on the wall?",
-            discription: "Several factors decide how long the interior paint will last. These include the quality of interior paint used, the system of application followed, the level of abuse it has been exposed to and also the general upkeep and maintenance of the wall. A good quality emulsion, applied following the correct system should last between five to seven years. Indigo Paints offers a range of interior emulsions that have a smooth finish and is easy to wash and maintain.",
+            discription: "Several factors decide how long the interior paint will last. These include the quality of interior paint used, the system of application followed, the level of abuse it has been exposed to and also the general upkeep and maintenance of the wall. A good quality emulsion, applied following the correct system should last between five to seven years. My dream Paints offers a range of interior emulsions that have a smooth finish and is easy to wash and maintain.",
             id: 9
         },
         {

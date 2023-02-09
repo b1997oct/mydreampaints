@@ -19,6 +19,7 @@ const Services = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    document.title = "My Dream Paints - Our Services makes happy customers and we focus on full fill the customer requirements"
   }, [])
 
 

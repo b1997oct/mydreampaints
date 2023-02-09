@@ -31,7 +31,7 @@ function Footer() {
         <div className="text-white items-center justify-center flex flex-col ">
           <h2>Suport</h2>
           <h2>24*7</h2>
-          <p>mydreampaintmgt@gmail.com</p>
+          <p>mydreampaintsmgt@gmail.com</p>
           <p>+91 9482658028</p>
         </div>
       </div>
@@ -39,6 +39,7 @@ function Footer() {
       <div className='flex'>
       <Copyright className='scale-90' /><h>mydream paints - all rights reserved</h>
       </div>
+      <Link to="/terms-and-conditions">terms & conditions</Link>
     </div>
     </footer>
 

@@ -84,8 +84,12 @@
 @media (min-width : 300px ) {
    .swiper-scrollbar {
     margin-top: 1rem;
-} 
+}
 
+#standard-basic:focus , #standard-basic:valid {
+  outline: white !important;
+  border-bottom: white !important;
+}
 
 }
 
@@ -100,7 +104,5 @@
 .css-440q0.Mui-focused::after {
     transform: scale(1) translate(0px);
 }
-
-
 
 

@@ -6,44 +6,81 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
 import { Select, MenuItem, Divider, TextField } from "@mui/material"
 import congrats from "../Assets/congrats.png"
-import { Facebook, Instagram, LocationOn, Mail, Phone, Pinterest, YouTube } from "@mui/icons-material";
-import { youtube,facebookPage,insagram,pinterest } from "../SocialLinks";
-
+import { Close, Facebook, Instagram, LocationOn, Mail, Phone, Pinterest, YouTube } from "@mui/icons-material";
+import { youtube, facebookPage, insagram, pinterest } from "../SocialLinks";
+import axios from "axios";
+// import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+// import { SnackbarProvider, useSnackbar } from 'notistack';
 
 function Contact() {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
   const [values, setValues] = useState({
-    name: "",
+    fname: "",
     mobile: "",
     email: "",
-    options: "1",
+    options: "Fresh Painting",
     message: ""
   });
 
+  const [ error , setError ] = useState("");
+  const [state, setState] = useState(false);
+
+  const handleClick = () => {
+    setState(true);
+  };
+
+  const handleClose = () => {
+    setState(false);
+  };
   // Alert
-  const [show, setShow] = useState(false);
   const [active, setActive] = useState(true);
 
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault()
-    localStorage.setItem("admin", false)
 
-    if (values.name === `${process.env.REACT_APP_ADMIN}`) {
-      console.log("admin...........")
-      localStorage.setItem("admin", true)
-      navigate("/admin")
+
+    const { fname, mobile } = values
+
+    if (fname === "") {
+      setError("First name is Required !")
+      handleClick();
+    } else if (mobile === "") {
+      setError("Phone number is Required !")
+      handleClick();
+    } else if (mobile.length <10 || mobile.length > 14) {
+      setError("Enter Valid Phone number")
+      handleClick();
+    }  else {
+      
+      axios.post("/user/register", values, {
+        headers: {
+          "Content-Type": "Application/json"
+        }
+      }).then((res) => {
+        navigate("/pages/success")
+        console.log(res)
+      }).catch((err) => {
+        if(err.response?.status === 403)
+        { 
+        return setError(err.response?.data), handleClick();
+        }
+        setError(err.message || "Something goes wrong");
+        handleClick();
+        console.log(err)
+      })
     }
-    console.log(values)
 
-    setActive(false)
+    console.log(error)
 
   }
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    document.title = "My Dream Paints - Connect with us just fillting this Contact form"
   }, [active])
 
   function handleChange(e) {
@@ -58,10 +95,24 @@ function Contact() {
     });
   }
 
+ 
 
   return (
     <div className="cantact-div">
-      {active ? <div className="flex flex-col lg:justify-center">
+       {/* <SnackbarProvider> */}
+       <Snackbar
+        anchorOrigin={{ vertical:"top", horizontal:"center" }}
+        open={state}
+        autoHideDuration={5000} 
+        onClose={handleClose}
+        message={error}
+        onClick={handleClose}
+        action={(<Close/>
+        )}
+        // key={vertical + horizontal}
+      />
+      {/* </SnackbarProvider> */}
+     <div className="flex flex-col lg:justify-center">
         <div className="justify-evenly flex">
           <h4 className="sm:text-3xl md:text-4xl lg:text-5xl text-4xl my-[2%] gap-3 flex flex-col sm:flex-row">
             <span className="text-[#04ef7a] text-center font-bold">CONNECT WITH</span> <h className="text-[#fff] font-bold">MY DREAM PAINTS</h></h4>
@@ -76,7 +127,7 @@ function Contact() {
               </div>
               <div className="grid gap-4">
                 <div className="flex gap-8"><Phone />+91 9482658028</div>
-                <div className="flex gap-8"><Mail />mydreampaintmgt@gmail.com</div>
+                <div className="flex gap-8"><Mail />mydreampaintsmgt@gmail.com</div>
                 <div className="flex gap-8"><LocationOn />Tiptur, Tumkur, Karnataka - 572119</div>
               </div>
               <div className="flex gap-3 mt-8">
@@ -90,32 +141,42 @@ function Contact() {
 
             </div>
             <div className="relative bg-[#0e4371] z-10 md:w-1/2">
-              <form className="md:mx-[12%] p-4 md:mt-4" onSubmit={handleSubmit}>
+              <form
+                name="leads"
+                method="post"
+                className="md:mx-[12%] p-4 md:mt-4"
+                onSubmit={handleSubmit}
+                action="/pages/success"
+              >
+                <input type="hidden" name="form-data" value="leads" />
                 <div className="flex flex-col  gap-6 md:w-80">
-                <TextField id="standard-basic" className="" InputLabelProps={{ className: "text-white" }} inputProps={{ className: "text-white" }}
-                  variant="standard" type="text" color="warning" label="Full Name"
-                  name="name" onChange={handleChange} />
-                <TextField id="standard-basic" type="text" variant="standard" label="Phone Number" color="warning" placeholder="Phone number*" InputLabelProps={{ className: "text-white" }}
-                  name="mobile" className="text-white" inputProps={{ className: "text-white" }} onChange={handleChange} />
-                <TextField type="text" variant="standard" label="E-Mail" color="warning"  placeholder="Enter your email" InputLabelProps={{ className: "text-white" }}
-                  name="email" inputProps={{ className: "text-white" }} onChange={handleChange} />
-                <Select
-                  InputLabelProps={{ className: "text-white" }}
-                  variant="standard"
-                  color="secondary" size="small"
-                  name="options"
-                  value={values.options}
-                  sx={{ color: "white" }}
-                  onChange={handleChange}
-                >
-                  <MenuItem disabled >Select your Asset stage</MenuItem>
-                  <MenuItem value="1">Fresh Painting</MenuItem>
-                  <MenuItem value="2">Re-Painting</MenuItem>
-                </Select>
-                <TextField variant="standard" type="text" label="Message" placeholder="Any Message" InputLabelProps={{ className: "text-white" }}
-                  name="message" color="warning" inputProps={{ className: "text-white" }} onChange={handleChange} />
-                  </div>
-                <button className="bg-gradient-to-tl to-green-400 from-green-400 hover:shadow-lg hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg" type="submit" >Send Message</button>
+                  <TextField id="standard-basic" placeholder="Enter your full name"  InputLabelProps={{ className: "text-white" }} inputProps={{ className: "text-white" }}
+                    variant="standard" type="text" color="success" label="Full Name"
+                    name="fname" onChange={handleChange} />
+                  <TextField id="standard-basic" type="text" variant="standard" label="Phone Number" color="success" placeholder="Phone number*" InputLabelProps={{ className: "text-white" }}
+                    name="mobile" className="text-white" inputProps={{ className: "text-white" }} onChange={handleChange} />
+                  <TextField type="text" variant="standard" label="E-Mail" color="success" placeholder="Enter your email" InputLabelProps={{ className: "text-white" }}
+                    name="email" inputProps={{ className: "text-white" }} onChange={handleChange} />
+                  <Select
+                  id="standard-basic"
+                    InputLabelProps={{ className: "text-white" }}
+                    variant="standard"
+                    color="success"
+                    size="small"
+                    name="options"
+                    value={values.options}
+                    sx={{ color: "white" }}
+                    onChange={handleChange}
+                  >
+                    <MenuItem disabled >Select your Asset stage</MenuItem>
+                    <MenuItem value="Fresh Painting">Fresh Painting</MenuItem>
+                    <MenuItem value="Re-Painting">Re-Painting</MenuItem>
+                  </Select>
+                  <TextField id="standard-basic" variant="standard" type="text" label="Message" placeholder="Any Message" InputLabelProps={{ className: "text-white" }}
+                    name="message" color="success" inputProps={{ className: "text-white" }} onChange={handleChange} />
+                </div>
+                <button 
+                  className="bg-gradient-to-tl to-green-400 from-green-400 hover:shadow-lg hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg" type="submit">Send Message</button>
               </form>
             </div>
           </div>
@@ -151,7 +212,7 @@ function Contact() {
               <Collapse in={helpOpen}>
                 <div id="example-collapse-text" className="text-left text-black font-semibold ">
                   If you have any questions or need further information, please <span className="font-bold">feel free to contact Us.</span>
-                  Our Phone number <span className="font-bold">+91 9482658028</span> our business email<br /> <span className="font-bold">mydreampaintmgt@gmail.com</span><br />
+                  Our Phone number <span className="font-bold">+91 9482658028</span> our business email<br /> <span className="font-bold">mydreampaintsmgt@gmail.com</span><br />
                   "Developer contact email <span className="font-bold">b1997oct@gmail.com</span>"
                 </div>
               </Collapse>
@@ -169,29 +230,40 @@ function Contact() {
             <h2 className="font-bold">About Us :</h2>
             <div id="example-collapse-text" className="text-justify text-2xl text-black font-semibold">
               <span className="font-bold">My dream Paint</span> produces high-quality paints with innovation and eco-friendliness. We consistently deliver paint solutions that not only serve your needs, but also protect the world we live in.
-              Our Phone number <span className="font-bold">+91 9482658028</span> our business email <span className="font-bold">mydreampaintmgt@gmail.com</span><br />
+              Our Phone number <span className="font-bold">+91 9482658028</span> our business email <span className="font-bold">mydreampaintsmgt@gmail.com</span><br />
               "Developer contact email <span className="font-bold">b1997oct@gmail.com</span>"
             </div>
           </div>
         </div>
 
       </div>
-        :
-        <div className="grid place-items-center py-20 ">
-          <div className="mx-3 md:w-96 h-80 my-4">
-            <img src={congrats} alt="img" />
-          </div>
-          <div className="flex flex-col gap-4 ">
-            <Button variant="contained" size="sm" className="bg-green-500 w-full truncate hover:shadow-lg hover:shadow-green-500" onClick={() => setActive(true)}>Submit one more form</Button>
-            <Button variant="contained" size="sm" className="w-full hover:shadow-lg hover:shadow-blue-500" onClick={() => navigate("/")} >Go to home page</Button>
-          </div>
-          <div className="flex justify-center font-semibold gap-1 my-4">Read the<Link to="/terms-and-conditions" className="no-underline flex md:gap-1"><span className="text-blue-400 cursor-pointer">Term's</span><span className="text-black">&</span> <span className="text-blue-400 cursor-pointer">Conditions</span></Link></div>
-        </div>
-
-      }
+       
 
     </div>
   )
 }
 
 export default Contact
+
+
+
+
+export function Success() {
+
+  const navigate = useNavigate();
+
+  return (
+    <div>
+      <div className="grid place-items-center py-20 ">
+        <div className="mx-3 md:w-96 h-80 my-4">
+          <img src={congrats} alt="img" />
+        </div>
+        <div className="flex flex-col gap-4 ">
+          <Button variant="contained" size="sm" className="bg-green-500 w-full truncate hover:shadow-lg hover:shadow-green-500" onClick={() => navigate("/contact")}>Submit one more form</Button>
+          <Button variant="contained" size="sm" className="w-full hover:shadow-lg hover:shadow-blue-500" onClick={() => navigate("/")} >Go to home page</Button>
+        </div>
+        <div className="flex justify-center font-semibold gap-1 my-4">Read the<Link to="/terms-and-conditions" className="no-underline flex md:gap-1"><span className="text-blue-400 cursor-pointer">Term's</span><span className="text-black">&</span> <span className="text-blue-400 cursor-pointer">Conditions</span></Link></div>
+      </div>
+    </div>
+  )
+}

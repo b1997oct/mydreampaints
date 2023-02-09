@@ -6,9 +6,8 @@ import Home from './Components/Home/Home';
 import Products from './Components/Products/Products';
 import Services from './Components/Services/Services';
 import Tools from './Components/Tools/Tools';
-import Contact from './Components/Contact';
+import Contact, { Success } from './Components/Contact';
 import CallMe from './Components/Store/CallMe';
-import Admin from './Admin';
 import { Navigate } from 'react-router-dom';
 import Terms from './Policies/Terms';
 
@@ -28,7 +27,7 @@ function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/tools' element={<Tools />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/admin' element={<Admin />} />
+        <Route path='/pages/success' element={<Success/>} />
         <Route path="/terms-and-conditions" element={<Terms/>} />
         <Route path='/' element={<Navigate replace to="/home" />} />
         <Route path='/*' element={<Page404 />} />

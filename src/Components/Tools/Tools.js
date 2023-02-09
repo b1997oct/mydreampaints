@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MenuList } from "./data/data";
 import {
   Box,
@@ -12,6 +12,10 @@ import {
 import paintingtool from "./images/paintingtool.jpg"
 
 const Tools = () => {
+
+  useEffect(()=>{
+    document.title="My Dream Paints - We provides the painting tools also if you like paining your self and dont know what tools to use no need to warry from now because we guide you on that too"
+  })
 
 
   return (
@@ -34,7 +38,7 @@ const Tools = () => {
             <div className="bg-[#fff] shadow-sm md:py-10 p-[1rem] rounded-xl lg:up-move cursor-pointer">
             <span className="font-bold">2.</span> The right painting tools can make your job easier, safer, and faster. They can even save you money.
             </div>
-            <div className="bg-[#fff] shadow-sm p-4 rounded-lg lg:up-move cursor-pointer">
+            <div className="bg-[#fff] shadow-sm p-4 hidden md:flex rounded-lg lg:up-move cursor-pointer">
             <span className="font-bold ">3.</span> That's why put together a list of the house painting tools and equipment that you need to have before starting your painting projects
             </div>
           </div>

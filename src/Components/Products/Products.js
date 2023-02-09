@@ -14,6 +14,7 @@ const Products = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    document.title = "My Dream Paints - With our hard research we introduce the best painting products like, MY DREAM EMULSION SHYNE, Distemper, Interior Primer, Exterior primer, Enamel paint, Crack filler and water proofs paints"
   }, [])
 
 

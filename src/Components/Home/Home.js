@@ -1,5 +1,5 @@
 import { Button } from "@material-tailwind/react";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "swiper/css";
 import "swiper/css/pagination";
@@ -85,6 +85,10 @@ function Home() {
             discription : "Once the site is ready, we do a post-painting clean-up & home disinfection service and will give you a walkthrough of how to take care of your walls.",
         }
     ]
+
+    useEffect(()=>{
+        document.title = "My Dream Paints - Best paints in south india"
+    },[])
 
     const style = {
         position: "absolute",
