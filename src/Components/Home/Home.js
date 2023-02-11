@@ -29,6 +29,10 @@ import eco from "../../Assets/eco.gif"
 import armchair from "../../Assets/armchair.gif"
 import roller from "../../Assets/paint-roller.gif"
 import timer from "../../Assets/timer.gif"
+import pd1 from "../../Assets/pd1.png"
+import pd2 from "../../Assets/pd2.png"
+import pd3 from "../../Assets/pd3.png"
+import pd4 from "../../Assets/pd4.png"
 
 
 
@@ -307,7 +311,7 @@ function Home() {
                 <a target="_blank" className="no-underline" href="https://wa.me/message/ASOK2XATB4ENJ1"><div className="mt-4 text-2xl flex justify-center font-semibold"><Button className="flex justify-center shadow-md bg-green-400 p-2 gap-2 items-center"><WhatsApp className="text-2xl scale-[1.5]" />WhatsApp</Button></div></a>
             </div>
 
-            {/* <div>
+       <div>
                 <div className="flex flex-wrap bg-white mt-4 md:px-4 md:py-10">
                     <div className="flex p-2 md:border-r-0 border-r-[1px] text-center justify-center md:border-b-0 border-b-[1px] border-gray-400 flex-col gap-2 items-center md:gap-4 w-1/2 lg:w-1/4">
                         <img src={pd1}
@@ -342,7 +346,7 @@ function Home() {
                 <div className="flex justify-center py-4">
                     <Button size="sm" variant="filled" className="bg-[#15c5fb] hover:shadow-lg hover:shadow-[#15c5fb]" onClick={() => navigate("/products")} >CHECKOUT PRODUCTS</Button>
                 </div>
-            </div> */}
+            </div> 
 
             <div className="">
                 <Divider className="bg-gray-900 h-[2px] my-4" />

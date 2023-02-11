@@ -9,12 +9,11 @@ import congrats from "../Assets/congrats.png"
 import { Close, Facebook, Instagram, LocationOn, Mail, Phone, Pinterest, YouTube } from "@mui/icons-material";
 import { youtube, facebookPage, insagram, pinterest } from "../SocialLinks";
 import axios from "axios";
-// import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
-// import { SnackbarProvider, useSnackbar } from 'notistack';
 
 function Contact() {
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
   const [values, setValues] = useState({
     fname: "",
@@ -24,7 +23,7 @@ function Contact() {
     message: ""
   });
 
-  const [ error , setError ] = useState("");
+  const [error, setError] = useState("");
   const [state, setState] = useState(false);
 
   const handleClick = () => {
@@ -34,8 +33,6 @@ function Contact() {
   const handleClose = () => {
     setState(false);
   };
-  // Alert
-  const [active, setActive] = useState(true);
 
   const navigate = useNavigate();
 
@@ -51,21 +48,25 @@ function Contact() {
     } else if (mobile === "") {
       setError("Phone number is Required !")
       handleClick();
-    } else if (mobile.length <10 || mobile.length > 14) {
+    } else if (mobile.length < 10 || mobile.length > 14) {
       setError("Enter Valid Phone number")
       handleClick();
-    }  else {
-      
+    } else {
+      setIsLoading(true)
       axios.post("/user/register", values, {
         headers: {
           "Content-Type": "Application/json"
         }
       }).then((res) => {
         navigate("/pages/success")
+        setIsLoading(false)
       }).catch((err) => {
-        if(err.response?.status === 403)
-        { 
-        return setError(err.response?.data), handleClick();
+        setTimeout(()=>{
+          setIsLoading(false)
+        },1000)
+       
+        if (err.response?.status === 403) {
+          return setError(err.response?.data), handleClick();
         }
         setError(err.message || "Something goes wrong");
         handleClick();
@@ -78,7 +79,7 @@ function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0)
     document.title = "My Dream Paints - Connect with us just fillting this Contact form"
-  }, [active])
+  }, [])
 
   function handleChange(e) {
 
@@ -92,24 +93,24 @@ function Contact() {
     });
   }
 
- 
+
 
   return (
     <div className="cantact-div">
-       {/* <SnackbarProvider> */}
-       <Snackbar
-        anchorOrigin={{ vertical:"top", horizontal:"center" }}
+      {/* <SnackbarProvider> */}
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={state}
-        autoHideDuration={5000} 
+        autoHideDuration={5000}
         onClose={handleClose}
         message={error}
         onClick={handleClose}
-        action={(<Close/>
+        action={(<Close />
         )}
-        // key={vertical + horizontal}
+      // key={vertical + horizontal}
       />
       {/* </SnackbarProvider> */}
-     <div className="flex flex-col lg:justify-center">
+      <div className="flex flex-col lg:justify-center">
         <div className="justify-evenly flex">
           <h4 className="sm:text-3xl md:text-4xl lg:text-5xl text-4xl my-[2%] gap-3 flex flex-col sm:flex-row">
             <span className="text-[#04ef7a] text-center font-bold">CONNECT WITH</span> <h className="text-[#fff] font-bold">MY DREAM PAINTS</h></h4>
@@ -128,10 +129,10 @@ function Contact() {
                 <div className="flex gap-8"><LocationOn />Tiptur, Tumkur, Karnataka - 572119</div>
               </div>
               <div className="flex gap-3 mt-8">
-                <a href={youtube} target="_blank"><YouTube className="cursor-pointer text-[#0e4371]" /></a>
-                <a href={facebookPage} target="_blank"><Facebook className="cursor-pointer text-[#0e4371]" /></a>
-                <a href={insagram} target="_blank"><Instagram className="cursor-pointer text-[#0e4371]" /></a>
-                <a href={pinterest} target="_blank"><Pinterest className="cursor-pointer text-[#0e4371]" /></a>
+                <a href={youtube} alt="mydream paints youtube link" rel={"social links"} target="_blank"><YouTube className="cursor-pointer text-[#0e4371]" /></a>
+                <a href={facebookPage} alt="mydream paints facebook link" rel={"social links"} target="_blank"><Facebook className="cursor-pointer text-[#0e4371]" /></a>
+                <a href={insagram} alt="mydream paints insagram link" rel={"social links"} target="_blank"><Instagram className="cursor-pointer text-[#0e4371]" /></a>
+                <a href={pinterest} alt="mydream paints pinterest link" rel={"social links"} target="_blank"><Pinterest className="cursor-pointer text-[#0e4371]" /></a>
               </div>
               <div className="absolute z-9 w-52 h-52 bg-gradient-to-br to-indigo-600 from-green-500
                md:bottom-[-15%] md:right-[-15%] bottom-[-25%] right-[-20%] rounded-full"></div>
@@ -147,18 +148,18 @@ function Contact() {
               >
                 <input type="hidden" name="form-data" value="leads" />
                 <div className="flex flex-col  gap-6 md:w-80">
-                  <TextField id="standard-basic" placeholder="Enter your full name"  InputLabelProps={{ className: "text-white" }} inputProps={{ className: "text-white" }}
-                    variant="standard" type="text" color="success" label="Full Name"
+                  <TextField id="standard-basic" placeholder="Enter your full name" InputLabelProps={{ className: "text-white" }} inputProps={{ className: "text-white" }}
+                    variant="standard" type="text"  color={"warning"} label="Full Name"
                     name="fname" onChange={handleChange} />
-                  <TextField id="standard-basic" type="text" variant="standard" label="Phone Number" color="success" placeholder="Phone number*" InputLabelProps={{ className: "text-white" }}
+                  <TextField id="standard-basic" type="text" variant="standard" label="Phone Number"  color="warning" placeholder="Phone number*" InputLabelProps={{ className: "text-white" }}
                     name="mobile" className="text-white" inputProps={{ className: "text-white" }} onChange={handleChange} />
-                  <TextField type="text" variant="standard" label="E-Mail" color="success" placeholder="Enter your email" InputLabelProps={{ className: "text-white" }}
+                  <TextField type="text" variant="standard" label="E-Mail"  color="warning" placeholder="Enter your email" InputLabelProps={{ className: "text-white" }}
                     name="email" inputProps={{ className: "text-white" }} onChange={handleChange} />
                   <Select
-                  id="standard-basic"
+                    id="standard-basic"
                     InputLabelProps={{ className: "text-white" }}
                     variant="standard"
-                    color="success"
+                    color="warning"
                     size="small"
                     name="options"
                     value={values.options}
@@ -170,10 +171,10 @@ function Contact() {
                     <MenuItem value="Re-Painting">Re-Painting</MenuItem>
                   </Select>
                   <TextField id="standard-basic" variant="standard" type="text" label="Message" placeholder="Any Message" InputLabelProps={{ className: "text-white" }}
-                    name="message" color="success" inputProps={{ className: "text-white" }} onChange={handleChange} />
+                    name="message" color="warning" inputProps={{ className: "text-white" }} onChange={handleChange} />
                 </div>
                 <Button 
-                  className="bg-gradient-to-tl to-green-400 from-green-400 hover:shadow-lg hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg" type="submit">Send Message</Button>
+                  className={`bg-green-400 hover:shadow-lg w-44 hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg ${isLoading ? "bg-green-300 text-[#3b4146]" : null}`} type="submit">{isLoading ?<div className='flex justify-center'>Sending<div className='animate-pulse'>.</div><div className='animate-pulse'>.</div><div className='animate-pulse'>.</div></div>: <div>Send Message</div>}</Button>
               </form>
             </div>
           </div>
@@ -234,7 +235,7 @@ function Contact() {
         </div>
 
       </div>
-       
+
 
     </div>
   )
