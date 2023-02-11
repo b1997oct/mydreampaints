@@ -7,15 +7,12 @@ import {
   CardContent,
   CardMedia,
   Rating,
-  Typography,
 } from "@mui/material";
-import { useState } from "react";
-import { Dashboard, DoneAll, FastForward, HealthAndSafety, LocationOn, SafetyCheck, Star, StarBorderOutlined, StarHalf } from "@mui/icons-material";
+import { Dashboard, DoneAll, FastForward, LocationOn } from "@mui/icons-material";
 import { useEffect } from "react";
 
 const Services = () => {
 
-  const [count, setCount] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -65,30 +62,6 @@ const Services = () => {
                       <div className="flex gap-1 my-auto text-yellow-500">
                         <Rating name="read-only" value={items.rating} readOnly />
                       </div>
-
-                      {/* {items.rating === 4 ?
-                      <div className="flex gap-1 text-yellow-500 my-auto">
-                      <Star/>
-                      <Star/>
-                      <Star/>
-                      <Star/>
-                      <StarBorderOutlined/>
-                      </div>
-                     : items.rating === 5 ?
-                     <div className="flex gap-1 text-yellow-400 my-auto">
-                     <Star/>
-                     <Star/>
-                     <Star/>
-                     <Star/>
-                     <Star/>
-                     </div>
-                     : <div className="flex gap-1 text-yellow-400 my-auto">
-                     <Star/>
-                     <Star/>
-                     <Star/>
-                     <StarHalf/>
-                     <StarBorderOutlined/>
-                      //  </div>} */}
                     </div>
 
                   </CardContent>

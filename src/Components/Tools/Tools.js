@@ -6,7 +6,6 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
-  Rating,
   Typography,
 } from "@mui/material";
 import paintingtool from "./images/paintingtool.jpg"
@@ -15,7 +14,7 @@ const Tools = () => {
 
   useEffect(()=>{
     document.title="My Dream Paints - We provides the painting tools also if you like paining your self and dont know what tools to use no need to warry from now because we guide you on that too"
-  })
+  },[])
 
 
   return (
@@ -25,7 +24,7 @@ const Tools = () => {
       <div className=''>
       <div>
         <div className="w-full md:p-4 md:py-10 lg:flex">
-          <div className="hidden lg:block lg:my-auto md:mx-auto mb-6 md:w-[80%] lg:w-[30rem]">
+          <div className="lg:my-auto md:mx-auto mb-6 md:w-[80%] lg:w-[30rem]">
             <img
               className="w-full"
               src={paintingtool}
@@ -35,10 +34,10 @@ const Tools = () => {
             <div className="bg-[#fff] shadow-sm p-4 rounded-xl lg:up-move cursor-pointer">
               <span className="font-bold">1.</span> No matter if you're new to painting or a experianced one thing is clear you have to have the right tools for the job
             </div>
-            <div className="bg-[#fff] shadow-sm md:py-10 p-[1rem] rounded-xl lg:up-move cursor-pointer">
+            <div className="bg-[#fff] shadow-sm py-10 px-[1rem] rounded-xl lg:up-move cursor-pointer">
             <span className="font-bold">2.</span> The right painting tools can make your job easier, safer, and faster. They can even save you money.
             </div>
-            <div className="bg-[#fff] shadow-sm p-4 hidden md:flex rounded-lg lg:up-move cursor-pointer">
+            <div className="bg-[#fff] shadow-sm p-4 hidden lg:flex rounded-lg lg:up-move cursor-pointer">
             <span className="font-bold ">3.</span> That's why put together a list of the house painting tools and equipment that you need to have before starting your painting projects
             </div>
           </div>
@@ -51,7 +50,7 @@ const Tools = () => {
             <CardActionArea className="">
               <div className="py-4 px-2">
                 <CardMedia
-                  sx={{ minHeight: "350px" }}
+                  sx={{ maxHeight: "350px" }}
                   component={"img"}
                   src={menu.image}
                   alt={menu.name}

@@ -1,17 +1,13 @@
 import React, { useEffect } from 'react'
 import { itemsList } from "./data";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Scrollbar, Autoplay } from "swiper";
+import { Navigation, Scrollbar, Autoplay } from "swiper";
 import feature_product from "./images/feature_product.jpg"
 
 
 
 function FeatureProducts() {
-  const [active, setActive] = useState(null);
-  useEffect(() => {
-    console.log("Active item", active)
-  })
 
   return (
     <div className=''>

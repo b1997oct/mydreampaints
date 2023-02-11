@@ -1,16 +1,8 @@
-import { LocationOn, Phone, WhatsApp } from '@mui/icons-material'
+import { Mail, Phone, WhatsApp } from '@mui/icons-material'
 import React from 'react'
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import SpeedDial from '@mui/material/SpeedDial';
 
 
@@ -50,11 +42,11 @@ function CallMe() {
       <Divider />
       <div >
         <div className="flex justify-evenly my-10 md:my-12 lg:my-14 font-semibold" >
-          <a href='https://goo.gl/maps/L7w2VanwCGHMAgwv9' target="_blank" class="no-underline">
-            <div className='flex flex-col justify-center items-center text-blue-500 md:scale-125 lg:scale-150'>
-              <LocationOn className='' />
+          <a href='mailto:mydreampaintsmgt@gmail.com' target="_blank" class="no-underline">
+            <div className='flex flex-col justify-center items-center text-gray-500 md:scale-125 lg:scale-150'>
+              <Mail className='' />
               <div>
-                Location
+                Email
               </div>
             </div>
           </a>

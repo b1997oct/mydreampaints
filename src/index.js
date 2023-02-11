@@ -6,10 +6,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-
-
 // axios.defaults.baseURL = 'http://localhost:5000/'
-axios.defaults.baseURL = 'https://mydreampaints.onrender.com/'
+axios.defaults.baseURL = `${process.env.REACT_APP_BASE_URL}`
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

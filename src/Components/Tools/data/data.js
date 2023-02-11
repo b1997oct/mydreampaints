@@ -1,10 +1,12 @@
 import pt1 from "../images/pt1.jpg";
 import pt2 from "../images/pt2.jpg";
 import pt3 from "../images/pt3.jpg";
-import pt4 from "../images/pt4.jpg";
-import pt5 from "../images/pt5.jpg";
+import pt4 from "../images/pts4.jpg";
+import pt5 from "../images/pts5.jpg";
 import pt6 from "../images/pt6.jpg";
-import pt7 from "../images/pt7.jpg";
+import pts6a from "../images/pts6a.jpg";
+import pts6b from "../images/pts6b.jpg";
+import pt7 from "../images/pts7.jpg";
 import pt8 from "../images/pt8.jpg";
 
 
@@ -57,6 +59,20 @@ export const MenuList = [
       "Ensures Bold Stroke Techniques & Exceptional Quality. Easy Blending, Aids in Highlighting & Helps in Loose Painting. Choose from a range of vibrant colours to suit your every need.",
     image: pt7,
     rating: 4.9,
+  },
+  {
+    name: " 125mm Multicolour Paint Brush",
+    description:
+      "Fine Smooth Finish Effect on Wall & Other Surfaces. Easy Blending & Helps in Loose Painting. Ideal for interior or Exterior Use with Latex or Oil Base Paint.",
+    image: pts6a,
+    rating: 5.0,
+  },
+  {
+    name: "150mm Multicolour Paint Brush",
+    description:
+      "Fine Smooth Finish Effect on Wall & Other Surfaces. Easy Blending & Helps in Loose Painting. Ideal for interior or Exterior Use with Latex or Oil Base Paint.",
+    image: pts6b,
+    rating: 5.0,
   },
   {
     name: "Infinizy Cleaning Sponge",

@@ -1,15 +1,16 @@
 import './App.css';
+import React, { lazy, Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Header from './Headers/Header';
-import Footer from './Footer/Footer';
-import Home from './Components/Home/Home';
-import Products from './Components/Products/Products';
-import Services from './Components/Services/Services';
-import Tools from './Components/Tools/Tools';
 import Contact, { Success } from './Components/Contact';
 import CallMe from './Components/Store/CallMe';
 import { Navigate } from 'react-router-dom';
 import Terms from './Policies/Terms';
+const Home = lazy(()=>import('./Components/Home/Home'));
+const Footer = lazy(()=>import('./Footer/Footer'))
+const Services = lazy(() => import('./Components/Services/Services'));
+const Tools = lazy(() => import('./Components/Tools/Tools'));
+const Products = lazy(() => import('./Components/Products/Products'));
 
 
 
@@ -22,17 +23,52 @@ function App() {
       <Header />
       <CallMe />
       <Routes>
-        <Route exact path='/home' element={<Home />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/tools' element={<Tools />} />
+        <Route exact path='/home' element={
+           <Suspense fallback={
+            <div className='w-screen h-screen'>
+              <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
+            </div>
+          } >
+            <Home />
+          </Suspense>
+        } />
+
+        <Route path='/products' element={
+          <Suspense fallback={
+            <div className='w-screen h-screen'>
+              <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
+            </div>
+          } >
+            <Products />
+          </Suspense>
+        }
+        />
+
+        <Route path='/services' element={
+          <Suspense fallback={
+            <div className='w-screen h-screen'>
+              <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
+            </div>
+          } >
+            <Services />
+          </Suspense>} />
+        <Route path='/tools' element={
+          <Suspense fallback={
+            <div className='w-screen h-screen'>
+              <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
+            </div>
+          } >
+            <Tools />
+          </Suspense>} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/pages/success' element={<Success/>} />
-        <Route path="/terms-and-conditions" element={<Terms/>} />
+        <Route path='/pages/success' element={<Success />} />
+        <Route path="/terms-and-conditions" element={<Terms />} />
         <Route path='/' element={<Navigate replace to="/home" />} />
         <Route path='/*' element={<Page404 />} />
       </Routes>
+      <Suspense fallback={<div></div>}>
       <Footer />
+      </Suspense>
     </div>
 
   )

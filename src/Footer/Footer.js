@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from "../Assets/logo.png"
-import { FaFacebook, FaGoogle, FaInstagram, FaLinkedin, FaMap, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaGoogle, FaInstagram, FaLinkedin, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
 import "./footer.css"
 import { facebook, googleMap, insagram, linkedin, pinterest, twitter, youtube } from '../SocialLinks'
 import { Copyright } from '@mui/icons-material'
@@ -31,7 +30,7 @@ function Footer() {
         <div className="text-white items-center justify-center flex flex-col ">
           <h2>Suport</h2>
           <h2>24*7</h2>
-          <p>mydreampaintsmgt@gmail.com</p>
+          <a href='mailto:mydreampaintsmgt@gmail.com' target="_blank" className='text-white no-underline'>mydreampaintsmgt@gmail.com</a>
           <p>+91 9482658028</p>
         </div>
       </div>

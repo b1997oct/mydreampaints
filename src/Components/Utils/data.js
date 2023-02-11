@@ -4,7 +4,7 @@ import i11 from "./images/i11.jpg";
 import i12 from "./images/i12.jpg";
 import Chola from "./images/i13.jpg";
 import Idli from "./images/i6.jpg";
-import Masalai3 from "./images/i10.jpg";
+import i4 from "./images/i4.jpg";
 import Paneer from "./images/i7.jpg";
 import Gujrati from "./images/i5.jpg";
 import i14 from "./images/i14.jpg";
@@ -51,10 +51,10 @@ export const itemsList = [
     bg:"bg-gradient-to-r from-orange-500 to-rose-500",
   },
   {
-    name: "Here what Ajay says",
+    name: "Here what Lokesh says",
     description:
       "I recently painted my house with My dream Paints Painting Service workers. The experience, was very friendly and did exactly what we asked for. Thanks for the service...",
-    image: Masalai3,
+    image: i4,
     rating: 4,
     bg:"bg-gradient-to-tl from-gray-400 to-yellow-400",
   },

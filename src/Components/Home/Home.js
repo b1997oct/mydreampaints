@@ -9,7 +9,6 @@ import "swiper/css/scrollbar";
 import painting from "../../Assets/painting.jpg"
 import FeatureProducts from '../Utils/FeatureProducts';
 import {ArrowBackIosNewSharp, WhatsApp } from "@mui/icons-material";
-
 import Faq from "../Store/Faq"
 import i1 from "../../Assets/i1.png"
 import i2 from "../../Assets/i2.png"
@@ -122,7 +121,7 @@ function Home() {
                     {slides.map((data) => (
                         <SwiperSlide key={data.id}>
                             <div className="lg:h-[91vh]">
-                                <img src={data.image} alt="img1"
+                                <img src={data.image} loading="eager" alt="hero View sliders"
                                     className="w-full h-full"
                                 />
                             </div>
@@ -248,7 +247,7 @@ function Home() {
                             <div className="mb-5">
                                 <div className="flex justify-center p-2 bg-white rounded-full">
                                     {/* <FormatPaintSharp className="scale-125 text-orange-500" /> */}
-                                    <img src={roller} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
+                                    <img src={roller} loading="lazy" alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
                                 </div>
                                 <h className="p-1 font-semibold text-start text-xl text-red-400">Expert Color Consultancy</h>
                                 <p className="mb-0  p-1 font-semibold text-justify">Our experts help choose color palettes that suit your preference . Get free color previews before getting actual painting!</p>
@@ -256,7 +255,7 @@ function Home() {
                             <div className="">
                                 <div className="flex justify-center bg-white p-2 rounded-full">
                                     {/* <FaTree className="scale-150 text-green-400 my-1" /> */}
-                                    <img src={tree} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
+                                    <img src={tree} loading="lazy" alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
                                 </div>
                                 <h className="p-1 font-semibold text-start text-xl text-green-500">Hygienic and Dust Free Process</h>
                                 <p className="mb-0  p-1 font-semibold text-justify">We use high tech machines to ensure a dust-free and safe home makeover.</p>
@@ -265,7 +264,7 @@ function Home() {
                         <div className="col-lg-6 ">
                             <div className="bg-gray-50 drop-shadow-md up-move rounded-lg py-10 md:px-5 px-2 text-center lg:mt-16">
                                 {/* <SafetyCheckTwoTone className="scale-[3] mb-4 text-green-500" /> */}
-                                <img src={shield} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
+                                <img src={shield} loading="lazy" alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
                                 <h4 className="text-teal-400">Procare & Safety</h4>
                                 <div className="font-semibold text-justify">Your Safety is our first priority. Our team and applicators are vaccinated and ensure hygienic service delivery. Our core focus is on green technology. We make and sell paints that are not only technologically advanced but also environment friendly.</div>
                                 {/* <img className="img-fluid" src="img/feature.png" alt=""> */}
@@ -278,7 +277,7 @@ function Home() {
                             <div className="mb-5">
                                 <div className="flex justify-center bg-white p-2 rounded-full">
                                     {/* <TimerSharp className="scale-150 text-gray-500" /> */}
-                                    <img src={timer} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
+                                    <img src={timer} loading="lazy" alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
                                 </div>
                                 <h className="p-1 font-semibold text-start text-xl text-indigo-500">Supervision & On Time Completion</h>
                                 <p className="mb-0  p-1 font-semibold text-justify">We work on your schedule, supervise and plan execution to make sure that we complete on-time.</p>
@@ -286,11 +285,11 @@ function Home() {
                             <div className="">
                                 <div className="flex justify-center bg-white p-[.7rem] rounded-full">
                                     {/* <FaHandshake className="scale-[2.5] text-sky-500" /> */}
-                                    <img src={armchair} alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
+                                    <img src={armchair} loading="lazy" alt="shield" className="w-20 h-20 flex mx-auto justify-center" />
 
                                 </div>
                                 <h className="p-1 font-semibold text-start text-xl text-teal-500">Protection of furniture</h>
-                                <p className="mb-0 p-1 font-semibold text-justify">We secure and shift all your goods with the utmost care.</p>
+                                <p className="mb-0 p-1 font-semibold text-justify">We secure and shift all your goods carefully.</p>
                             </div>
                         </div>
                     </div>
@@ -305,7 +304,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <a target="_blank" className="no-underline" href="https://wa.me/message/ASOK2XATB4ENJ1"><div className="mt-4 text-2xl flex justify-center font-semibold"><Button className="flex justify-center bg-green-400 p-2 gap-2 items-center"><WhatsApp className="text-2xl scale-[1.5]" />WhatsApp</Button></div></a>
+                <a target="_blank" className="no-underline" href="https://wa.me/message/ASOK2XATB4ENJ1"><div className="mt-4 text-2xl flex justify-center font-semibold"><Button className="flex justify-center shadow-md bg-green-400 p-2 gap-2 items-center"><WhatsApp className="text-2xl scale-[1.5]" />WhatsApp</Button></div></a>
             </div>
 
             {/* <div>

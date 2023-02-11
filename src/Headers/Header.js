@@ -3,36 +3,17 @@ import "./header.css"
 import { Divide as Hamburger } from 'hamburger-react'
 import logo from "../Assets/logo.png"
 import React, { useState } from 'react'
-import { FaHome, FaList, FaPaintRoller, FaPhone, FaSearch, FaTools, FaWarehouse } from "react-icons/fa"
+import { FaHome, FaList, FaPaintRoller, FaPhone, FaTools } from "react-icons/fa"
 import { useEffect } from 'react'
-import { Swiper } from 'swiper/react'
-import { SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper'
+
 
 
 export default function Header() {
 
     const [isOpen, setOpen] = useState(false)
     const [display, setDisplay] = useState(false)
-    const [search, setSearch] = useState(false)
 
     const navigate = useNavigate();
-
-    // var swipers = [
-    //     {
-    //         title: "Happy New Year to All wish you best of luck...",
-    //         id: 1
-    //     },
-    //     {
-    //         title: "Mega offer on 2023 new year upto 50% Off...",
-    //         id: 2
-    //     },
-    //     {
-    //         title: "contact for any quires 24*7 custumer care",
-    //         id: 3
-    //     }
-    // ]
-    // Hamburger toggle
 
     const navFun = () => {
         setOpen(false)

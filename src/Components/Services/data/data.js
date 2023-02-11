@@ -48,7 +48,7 @@ export const itemsList = [
     font: "text-white"
   },
   {
-    name: "Here is What Jayashree says",
+    name: "Here is What Lokesh says",
     description:
       "The execution of the My dream Paints Safe Painting services is as agreed to. The supervision was done well & their team work was applausable They suggest really soothing colours schemess that worked well",
     image: Masalai3,

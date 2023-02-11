@@ -13,10 +13,10 @@ function Terms() {
         <>
             <div className='relative mb-4 py-10 lg:py-0 bg-gray-200'>
                 <div className='absolute w-full h-full '>
-                <div className='text-5xl md:text-7xl lg:text-9xl relative z-10 text-center my-[10%] font-semibold bg-gradient-to-r from-[#fff] to-[#e0fcc5] bg-clip-text text-transparent '>
+                <div className='text-5xl md:text-7xl lg:text-9xl relative z-[1] text-center my-[10%] font-semibold bg-gradient-to-r from-[#fff] to-[#e0fcc5] bg-clip-text text-transparent '>
                     Terms and conditions</div>
                     </div>
-                    <div className='relative  w-full z-0'>
+                    <div className='relative  w-full z-[0]'>
                     <img src={law} alt="terms-and-conditions" className='w-full h-full' />
                     </div>
             </div>
@@ -24,7 +24,7 @@ function Terms() {
             <div className='md:flex flex-row-reverse'>
                 <div className='text-xl md:text-2xl text-bold mx-4 text-justify md:mr-4'>
                     <div>
-                        <div className='flex gap-2'><span className='font-bold'>1.</span> <p>My Dream Paints gives you preminum quality paints that are tested before coming to market and company provides the exchange on my dream products only products are not used.</p></div>
+                        <div className='flex gap-2'><span className='font-bold'>1.</span> <p>My Dream Paints gives you premium quality paints that are tested before coming to market and company provides the exchange on my dream products only products are not used.</p></div>
                         <div className='flex gap-2'><span className='font-bold'>2.</span>  <p>Terms on Free 1 Liter of sample paint.</p></div>
                         <div className='ml-4'>
                             <div className='flex gap-2'><span className='font-bold whitespace-nowrap'>Step 1</span>  <p>- is the receiver should fill the form before. through website or through whatsapp</p></div>

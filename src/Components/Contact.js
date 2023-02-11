@@ -62,7 +62,6 @@ function Contact() {
         }
       }).then((res) => {
         navigate("/pages/success")
-        console.log(res)
       }).catch((err) => {
         if(err.response?.status === 403)
         { 
@@ -70,11 +69,9 @@ function Contact() {
         }
         setError(err.message || "Something goes wrong");
         handleClick();
-        console.log(err)
       })
     }
 
-    console.log(error)
 
   }
 
@@ -175,8 +172,8 @@ function Contact() {
                   <TextField id="standard-basic" variant="standard" type="text" label="Message" placeholder="Any Message" InputLabelProps={{ className: "text-white" }}
                     name="message" color="success" inputProps={{ className: "text-white" }} onChange={handleChange} />
                 </div>
-                <button 
-                  className="bg-gradient-to-tl to-green-400 from-green-400 hover:shadow-lg hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg" type="submit">Send Message</button>
+                <Button 
+                  className="bg-gradient-to-tl to-green-400 from-green-400 hover:shadow-lg hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg" type="submit">Send Message</Button>
               </form>
             </div>
           </div>
@@ -251,12 +248,15 @@ export default Contact
 export function Success() {
 
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
 
   return (
     <div>
       <div className="grid place-items-center py-20 ">
         <div className="mx-3 md:w-96 h-80 my-4">
-          <img src={congrats} alt="img" />
+          <img src={congrats} alt="Application status" />
         </div>
         <div className="flex flex-col gap-4 ">
           <Button variant="contained" size="sm" className="bg-green-500 w-full truncate hover:shadow-lg hover:shadow-green-500" onClick={() => navigate("/contact")}>Submit one more form</Button>

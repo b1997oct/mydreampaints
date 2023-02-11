@@ -7,7 +7,6 @@ import {
   CardContent,
   CardMedia,
   Rating,
-  Typography,
 } from "@mui/material";
 
 const Products = () => {

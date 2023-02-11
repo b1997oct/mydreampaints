@@ -1,22 +1,13 @@
 import p0 from "../images/p0.png";
 import p1 from "../images/p1.png";
-import p2 from "../images/p2.png";
-import p3 from "../images/p3.png";
 import p4 from "../images/p4.png";
 import p5 from "../images/p5.png";
-import p6 from "../images/p6.png";
-import p7 from "../images/p7.png";
 import p7a from "../images/p7a.jpg";
 import p8 from "../images/p8.jpg";
 import p9 from "../images/p9.jpg";
-import p10 from "../images/p10.jpg";
 import p11 from "../images/p11.jpg";
-import p12 from "../images/p12.jpg";
-import p13 from "../images/p13.jpg";
-import p14 from "../images/p14.jpg";
 import p15 from "../images/p15.jpg";
 import p16 from "../images/p16.jpg";
-import p17 from "../images/p17.jpg";
 
 export const itemsList = [
   {
