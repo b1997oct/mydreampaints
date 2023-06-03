@@ -50,7 +50,7 @@ function CallMe() {
               </div>
             </div>
           </a>
-          <a href='https://wa.me/message/ASOK2XATB4ENJ1' target="_blank" class="no-underline">
+          <a href='https://wa.me/+919482658028?text=I came across your website and I am interested in discussing our painting requirements. Can you please provide me with more information on the services you offer and how we can proceed? Thank you.' target="_blank" class="no-underline">
             <div className='flex flex-col justify-center items-center text-green-500 md:scale-125 lg:scale-150'>
               <WhatsApp />
               <div>

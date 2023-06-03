@@ -9,25 +9,29 @@ div>.swiper-button-next {
   width: 5rem;
   height: 5rem;
   font-weight: 900;
-  background: #2ea2cc;
+  background: #9483f1;
   color: rgb(255, 255, 255);
   border-radius: 100%;
 }
 
+.swiper-pagination {
+margin-bottom: 1.5rem;
+}
+
 
 .swiper-pagination>.swiper-pagination-bullet {
-  width: 2rem;
-  height: 2rem;
+  width: 1rem;
+  height: 1rem;
   line-height: 20px;
-  border: 2px solid rgb(2, 19, 37);
-  box-shadow: rgb(26, 9, 9) 0 0 5px;
+  border: 1.2px solid rgb(2, 19, 37);
+  box-shadow: rgb(26, 9, 9) 0 0 2.5px;
   opacity: 1;
   background: white;
   transition: all ease-in-out;
 }
 
 .swiper-pagination>.swiper-pagination-bullet-active {
-  width: 4rem;
+  width: 2rem;
   border-radius: 40px;
   transition: all ease-in-out;
 }
@@ -38,13 +42,16 @@ div>.swiper-button-next {
   div>.swiper-button-next::after {
     font-size: 2rem;
   }
+  .swiper-pagination {
+    margin-bottom: 0rem;
+    }
 
   div>.swiper-button-prev,
   div>.swiper-button-next {
     width: 3rem;
     height: 3rem;
     font-weight: 900;
-    background: #2ea2cc;
+    background: #9483f1;
     color: rgb(255, 255, 255);
     border-radius: 100%;
   }
@@ -58,10 +65,11 @@ div>.swiper-button-next {
     height: 10px;
     line-height: 20px;
     border: 1.2px solid rgb(2, 19, 37);
-  box-shadow: rgb(26, 9, 9) 0 0 2.5px;
+    box-shadow: rgb(26, 9, 9) 0 0 2.5px;
     transition: all ease-in-out;
     opacity: 1;
   }
+
   .swiper-pagination>.swiper-pagination-bullet-active {
     width: 20px;
     border-radius: 20px;

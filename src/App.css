@@ -1,20 +1,15 @@
-
 .App {
     /* background-image: linear-gradient(rgb(253, 247, 143), rgb(255, 34, 0)); */
     margin: 0;
 }
 
-#loading-bar-spinner.spinner {
-    left: 50%;
-    margin-left: -20px;
-    top: 50%;
-    margin-top: -20px;
-    position: absolute;
+.spinner {
+    margin: 30vh auto 0 auto;
     z-index: 19 !important;
-    animation: loading-bar-spinner 400ms linear infinite;
+    animation: loading-bar-spinner 100ms linear infinite;
 }
 
-#loading-bar-spinner.spinner .spinner-icon {
+/* #loading-bar-spinner.spinner .spinner-icon {
     width: 40px;
     height: 40px;
     border:  solid 4px transparent;
@@ -26,4 +21,4 @@
 @keyframes loading-bar-spinner {
   0%   { transform: rotate(0deg);   transform: rotate(0deg); }
   100% { transform: rotate(360deg); transform: rotate(360deg); }
-}
+}  */

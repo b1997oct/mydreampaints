@@ -14,6 +14,7 @@ const Tools = () => {
 
   useEffect(() => {
     document.title = "My Dream Paints - We provides the painting tools also if you like paining your self and dont know what tools to use no need to warry from now because we guide you on that too"
+    window.scrollTo(0, 0)
   }, [])
 
 

@@ -105,4 +105,8 @@
     transform: scale(1) translate(0px);
 }
 
+.css-1hsbo08-MuiInputBase-root-MuiInput-root:after {
+    border-bottom: 2px solid white !important;
+}
+
 

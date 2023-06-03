@@ -4,7 +4,7 @@ import Collapse from 'react-bootstrap/Collapse';
 import { FaChevronDown } from 'react-icons/fa'
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
-import { Select, MenuItem, Divider, TextField } from "@mui/material"
+import { Select, MenuItem, Divider, TextField, Alert } from "@mui/material"
 import congrats from "../Assets/congrats.png"
 import { Close, Facebook, Instagram, LocationOn, Mail, Phone, Pinterest, YouTube } from "@mui/icons-material";
 import { youtube, facebookPage, insagram, pinterest } from "../SocialLinks";
@@ -103,12 +103,16 @@ function Contact() {
         open={state}
         autoHideDuration={5000}
         onClose={handleClose}
-        message={error}
+    
         onClick={handleClose}
         action={(<Close />
         )}
-      // key={vertical + horizontal}
-      />
+      
+      >
+      <Alert severity="error">
+      {error}
+      </Alert>
+      </Snackbar>
       {/* </SnackbarProvider> */}
       <div className="flex flex-col lg:justify-center">
         <div className="justify-evenly flex">
@@ -149,17 +153,16 @@ function Contact() {
                 <input type="hidden" name="form-data" value="leads" />
                 <div className="flex flex-col  gap-6 md:w-80">
                   <TextField id="standard-basic" placeholder="Enter your full name" InputLabelProps={{ className: "text-white" }} inputProps={{ className: "text-white" }}
-                    variant="standard" type="text"  color={"warning"} label="Full Name"
+                    variant="standard" type="text" color="error"  label="Full Name"
                     name="fname" onChange={handleChange} />
-                  <TextField id="standard-basic" type="text" variant="standard" label="Phone Number"  color="warning" placeholder="Phone number*" InputLabelProps={{ className: "text-white" }}
+                  <TextField id="standard-basic" type="text" color="error" variant="standard" label="Phone Number" placeholder="Phone number*" InputLabelProps={{ className: "text-white" }}
                     name="mobile" className="text-white" inputProps={{ className: "text-white" }} onChange={handleChange} />
-                  <TextField type="text" variant="standard" label="E-Mail"  color="warning" placeholder="Enter your email" InputLabelProps={{ className: "text-white" }}
+                  <TextField type="text" color="error" variant="standard" label="E-Mail" placeholder="Enter your email" InputLabelProps={{ className: "text-white" }}
                     name="email" inputProps={{ className: "text-white" }} onChange={handleChange} />
                   <Select
                     id="standard-basic"
                     InputLabelProps={{ className: "text-white" }}
                     variant="standard"
-                    color="warning"
                     size="small"
                     name="options"
                     value={values.options}
@@ -170,8 +173,8 @@ function Contact() {
                     <MenuItem value="Fresh Painting">Fresh Painting</MenuItem>
                     <MenuItem value="Re-Painting">Re-Painting</MenuItem>
                   </Select>
-                  <TextField id="standard-basic" variant="standard" type="text" label="Message" placeholder="Any Message" InputLabelProps={{ className: "text-white" }}
-                    name="message" color="warning" inputProps={{ className: "text-white" }} onChange={handleChange} />
+                  <TextField id="standard-basic" color="error" variant="standard" type="text" label="Message" placeholder="Any Message" InputLabelProps={{ className: "text-white" }}
+                    name="message" inputProps={{ className: "text-white" }} onChange={handleChange} />
                 </div>
                 <Button 
                   className={`bg-green-400 hover:shadow-lg w-44 hover:shadow-green-300 font-bold text-[#031525] py-2 px-4 mt-6 mb-3 md:mb-0 rounded-lg ${isLoading ? "bg-green-300 text-[#3b4146]" : null}`} type="submit">{isLoading ?<div className='flex justify-center'>Sending<div className='animate-pulse'>.</div><div className='animate-pulse'>.</div><div className='animate-pulse'>.</div></div>: <div>Send Message</div>}</Button>

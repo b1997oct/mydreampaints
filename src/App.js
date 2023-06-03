@@ -6,8 +6,11 @@ import Contact, { Success } from './Components/Contact';
 import CallMe from './Components/Store/CallMe';
 import { Navigate } from 'react-router-dom';
 import Terms from './Policies/Terms';
-const Home = lazy(()=>import('./Components/Home/Home'));
-const Footer = lazy(()=>import('./Footer/Footer'))
+import Blogs from './Components/Blogs';
+import SingleBlog from './Components/Blogs/SingleBlog';
+import { ToastContainer } from 'react-toastify';
+const Home = lazy(() => import('./Components/Home/Home'));
+const Footer = lazy(() => import('./Footer/Footer'))
 const Services = lazy(() => import('./Components/Services/Services'));
 const Tools = lazy(() => import('./Components/Tools/Tools'));
 const Products = lazy(() => import('./Components/Products/Products'));
@@ -16,15 +19,28 @@ const Products = lazy(() => import('./Components/Products/Products'));
 
 
 function App() {
-
+  // bg-gradient-to-tl from-orange-300 to-[#f2f5c1]
   return (
 
-    <div className='bg-gradient-to-tl from-orange-300 to-[#f2f5c1]'>
+    <div className='bg-gradient-to-tl to-[#FFFFDE] from-orange-300'>
       <Header />
+      <div className='h-[3.5rem]'></div>
       <CallMe />
       <Routes>
+        <Route exact path='/' element={
+          <Suspense fallback={
+            <div className='w-screen h-screen'>
+              <div id="loading-bar-spinner" class="spinner">
+                <div class="spinner-icon">
+                </div>
+              </div>
+            </div>
+          } >
+            <Home />
+          </Suspense>
+        } />
         <Route exact path='/home' element={
-           <Suspense fallback={
+          <Suspense fallback={
             <div className='w-screen h-screen'>
               <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
             </div>
@@ -61,13 +77,14 @@ function App() {
             <Tools />
           </Suspense>} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/blog/:blod_id' element={<SingleBlog />} />
         <Route path='/pages/success' element={<Success />} />
         <Route path="/terms-and-conditions" element={<Terms />} />
-        <Route path='/' element={<Navigate replace to="/home" />} />
         <Route path='/*' element={<Page404 />} />
       </Routes>
       <Suspense fallback={<div></div>}>
-      <Footer />
+        <Footer />
       </Suspense>
     </div>
 
