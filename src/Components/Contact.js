@@ -214,7 +214,7 @@ function Contact() {
                 <div id="example-collapse-text" className="text-left text-black font-semibold ">
                   If you have any questions or need further information, please <span className="font-bold">feel free to contact Us.</span>
                   Our Phone number <span className="font-bold">+91 9482658028</span> our business email<br /> <span className="font-bold">mydreampaintsmgt@gmail.com</span><br />
-                  "Developer contact email <span className="font-bold">b1997oct@gmail.com</span>"
+                  "Developer contact email <span className="font-bold">raindevelopers.web@gmail.com</span>"
                 </div>
               </Collapse>
             </div>
@@ -232,7 +232,7 @@ function Contact() {
             <div id="example-collapse-text" className="text-justify text-2xl text-black font-semibold">
               <span className="font-bold">My dream Paint</span> produces high-quality paints with innovation and eco-friendliness. We consistently deliver paint solutions that not only serve your needs, but also protect the world we live in.
               Our Phone number <span className="font-bold">+91 9482658028</span> our business email <span className="font-bold">mydreampaintsmgt@gmail.com</span><br />
-              "Developer contact email <span className="font-bold">b1997oct@gmail.com</span>"
+              "Developer contact email <span className="font-bold">raindevelopers.web@gmail.com</span>"
             </div>
           </div>
         </div>
