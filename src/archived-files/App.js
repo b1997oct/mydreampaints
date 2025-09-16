@@ -1,16 +1,16 @@
 import './App.css';
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Header from './Headers/Header';
+import Header from './archived/Headers/Header';
 import Contact, { Success } from './Components/Contact';
 import CallMe from './Components/Store/CallMe';
 import { Navigate } from 'react-router-dom';
-import Terms from './Policies/Terms';
+import Terms from './components/ui/Policies/Terms';
 import Blogs from './Components/Blogs';
 import SingleBlog from './Components/Blogs/SingleBlog';
 import { ToastContainer } from 'react-toastify';
 const Home = lazy(() => import('./Components/Home/Home'));
-const Footer = lazy(() => import('./Footer/Footer'))
+const Footer = lazy(() => import('./components/layouts/Footer/Footer'))
 const Services = lazy(() => import('./Components/Services/Services'));
 const Tools = lazy(() => import('./Components/Tools/Tools'));
 const Products = lazy(() => import('./Components/Products/Products'));
