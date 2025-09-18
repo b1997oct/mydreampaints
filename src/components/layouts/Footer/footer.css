@@ -1,7 +1,7 @@
 footer {
-	background: #343a40;
+	background: #f0f0f0;
 	padding-top: 50px;
-	color: white;
+	color: rgb(0, 0, 0);
 	margin-top: 20px;
 }
 
@@ -17,7 +17,7 @@ footer {
 .send-btn {
 	border: 1.5px solid #fff;
 	background-color: #101010;
-	color: white;
+	color: rgb(0, 0, 0);
 	right: .5rem;
 }
 

@@ -2,6 +2,7 @@ import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
 import brushCursor from "@/components/ui/Paint";
+import Footer from "@/components/layouts/Footer/Footer";
 
 // Existing Geist fonts
 const font = IBM_Plex_Sans({
@@ -15,6 +16,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body
@@ -23,6 +25,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

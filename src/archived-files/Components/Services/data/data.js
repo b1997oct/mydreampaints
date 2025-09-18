@@ -9,7 +9,7 @@ import Masalai3 from "../images/i10.jpg";
 import Paneer from "../images/i7.jpg";
 import Gujrati from "../images/i5.jpg";
 
-export const itemsList = [
+export const customersList = [
   {
     name: "Anurag's house paining review",
     description:

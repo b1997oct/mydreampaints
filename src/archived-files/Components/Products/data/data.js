@@ -9,7 +9,7 @@ import p11 from "../images/p11.jpg";
 import p15 from "../images/p15.jpg";
 import p16 from "../images/p16.jpg";
 
-export const itemsList = [
+export const productsList = [
   {
     name: "MY DREAM INTERIOR PREMIYER",
     description:
@@ -37,13 +37,13 @@ export const itemsList = [
   //   rating: 4.5,
   //   bg: ""
   // },
-  {
-    name: "Acrylic wall putty",
-    description:
-      "Having a beautiful home at an affordable price is no more a dream. This water-based acrylic distemper from My dream Paints has 900+ shades to choose from to make sure you get a home in the colour of your choice. Moreover, this category paints is a washable, lead-free paint with a stylish matt finish.",
-    image: p11,
-    rating: 4.6,
-  },
+  // {
+  //   name: "Acrylic wall putty",
+  //   description:
+  //     "Having a beautiful home at an affordable price is no more a dream. This water-based acrylic distemper from My dream Paints has 900+ shades to choose from to make sure you get a home in the colour of your choice. Moreover, this category paints is a washable, lead-free paint with a stylish matt finish.",
+  //   image: p11,
+  //   rating: 4.6,
+  // },
   {
     name: "My Dream Elestomeric coating",
     description:

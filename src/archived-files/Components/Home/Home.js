@@ -382,6 +382,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            
             <div className="mx-[4px] md:mx-4 border-2 border-gray-600 p-4 rounded-md">
                 <div className="text-center flex gap-2 justify-center flex-col md:flex-row text-xl md:text-3xl font-semibold">
                     Facing any Problems in Painting, Say Hi on WhatsApp
