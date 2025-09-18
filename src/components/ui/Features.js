@@ -1,9 +1,3 @@
-import Image from "next/image"
-import roller from "../../assets/paint-roller.gif"
-import tree from "../../assets/tree.gif"
-import shield from "../../assets/shield.gif"
-import timer from "../../assets/timer.gif"
-import armchair from '../../assets/armchair.gif'
 import Heading from "./Heading"
 
 const featuresList = [
@@ -12,7 +6,7 @@ const featuresList = [
         title: "Expert Color Consultancy",
         description:
             "Our experts help choose color palettes that suit your preference. Get free color previews before getting actual painting!",
-        image: roller,
+        image: "/assets/paint-roller.gif",
         color: "from-pink-400 to-red-500",
     },
     {
@@ -20,7 +14,7 @@ const featuresList = [
         title: "Hygienic and Dust Free Process",
         description:
             "We use high tech machines to ensure a dust-free and safe home makeover.",
-        image: tree,
+        image: "/assets/tree.gif",
         color: "from-green-400 to-emerald-500",
     },
     {
@@ -28,7 +22,7 @@ const featuresList = [
         title: "Procare & Safety",
         description:
             "Your Safety is our first priority. Our team and applicators are vaccinated and ensure hygienic service delivery. Our core focus is on green technology. We make and sell paints that are not only technologically advanced but also environment friendly.",
-        image: shield,
+        image: "/assets/shield.gif",
         color: "from-teal-400 to-cyan-500",
         isCenter: true,
     },
@@ -37,20 +31,21 @@ const featuresList = [
         title: "Supervision & On Time Completion",
         description:
             "We work on your schedule, supervise and plan execution to make sure that we complete on-time.",
-        image: timer,
+        image: "/assets/timer.gif",
         color: "from-indigo-400 to-blue-500",
     },
     {
         id: 5,
         title: "Protection of Furniture",
         description: "We secure and shift all your goods carefully.",
-        image: armchair,
+        image: "/assets/armchair.gif",
         color: "from-teal-400 to-emerald-500",
     },
 ]
 
+
 export const Features = () => {
-    
+
     return (
         <section className="w-full bg-gradient-to-b from-white to-gray-50 py-12 md:pt-20">
             <div className="theme-container px-4 lg:px-0">
@@ -78,10 +73,11 @@ export const Features = () => {
                                     <div className="flex justify-center mb-6">
                                         <div className={`bg-gradient-to-r ${feature.color} p-[3px] rounded-full`}>
                                             <div className="bg-white rounded-full p-4 shadow-lg">
-                                                <Image
+                                                <img
                                                     src={feature.image}
                                                     alt={feature.title}
                                                     className="w-14 h-14 object-contain"
+                                                    fill
                                                 />
                                             </div>
                                         </div>
@@ -108,7 +104,7 @@ export const Features = () => {
                                 <div className="mb-6">
                                     <div className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 p-[4px] rounded-full">
                                         <div className="bg-white rounded-full p-3 shadow-lg">
-                                            <Image
+                                            <img
                                                 src={featuresList[2].image}
                                                 alt={featuresList[2].title}
                                                 className="w-14 h-14 object-contain"
@@ -143,7 +139,7 @@ export const Features = () => {
                                     <div className="flex justify-center mb-6">
                                         <div className={`bg-gradient-to-r ${feature.color} p-[3px] rounded-full`}>
                                             <div className="bg-white rounded-full p-4 shadow-lg">
-                                                <Image
+                                                <img
                                                     src={feature.image}
                                                     alt={feature.title}
                                                     className="w-14 h-14 object-contain"
