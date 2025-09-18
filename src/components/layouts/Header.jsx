@@ -1,6 +1,5 @@
 import React from 'react'
 import Button from '../base/button'
-import logo from "../../assets/logo.png"
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -13,9 +12,11 @@ export default function Header() {
           <div className='h-10 w-10'>
             <Link href={"/"}>
               <Image
-                src={logo}
+                src={"/assets/logo.png"}
                 alt="logo"
                 className="scale-[3]"
+                width={40}
+                height={40}
               />
             </Link>
           </div>
