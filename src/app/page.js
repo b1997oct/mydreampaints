@@ -52,7 +52,7 @@ export default function Home() {
 
       <Perks />
 
-    
+
 
       <Products />
 
@@ -77,7 +77,7 @@ export default function Home() {
               </h2>
               <div className='w-16 h-1 bg-green-400 mb-6'></div>
               <p className='text-lg font-light leading-relaxed'>
-                We provide more than just a paint service; we offer a transformation. Our solutions combine quality, durability, and style to elevate the beauty and value of every property. From elegant villas to dynamic commercial spaces, we specialize in both interior and exterior painting. Using only premium, weather-resistant paints specifically chosen for Dubai's climate, our expert team ensures a flawless, long-lasting finish. We work with precision and care, completing projects on time and with minimal disruption. With transparent pricing, detailed color consultations, and decorative finishes, we don't just paint walls—we create spaces that inspire.
+                {`We provide more than just a paint service; we offer a transformation. Our solutions combine quality, durability, and style to elevate the beauty and value of every property. From elegant villas to dynamic commercial spaces, we specialize in both interior and exterior painting. Using only premium, weather-resistant paints specifically chosen for Dubai's climate, our expert team ensures a flawless, long-lasting finish. We work with precision and care, completing projects on time and with minimal disruption. With transparent pricing, detailed color consultations, and decorative finishes, we don't just paint walls—we create spaces that inspire.`}
               </p>
             </div>
 

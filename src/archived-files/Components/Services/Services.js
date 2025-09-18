@@ -1,79 +1,79 @@
-import React from "react";
-import { itemsList } from "./data/data";
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Rating,
-} from "@mui/material";
-import { Dashboard, DoneAll, FastForward, LocationOn } from "@mui/icons-material";
-import { useEffect } from "react";
+// import React from "react";
+// import { itemsList } from "./data/data";
+// import {
+//   Box,
+//   Card,
+//   CardActionArea,
+//   CardContent,
+//   CardMedia,
+//   Rating,
+// } from "@mui/material";
+// import { Dashboard, DoneAll, FastForward, LocationOn } from "@mui/icons-material";
+// import { useEffect } from "react";
 
-const Services = () => {
-
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    document.title = "My Dream Paints - Our Services makes happy customers and we focus on full fill the customer requirements"
-  }, [])
+// const Services = () => {
 
 
-  return (
+//   useEffect(() => {
+//     window.scrollTo(0, 0)
+//     document.title = "My Dream Paints - Our Services makes happy customers and we focus on full fill the customer requirements"
+//   }, [])
 
-    <div className="">
-      <div className='py-10 bg-gradient-to-tl from-[#ebc553f3] to-yellow-300 via-rose-500 text-center flex justify-center items-center hover:sm:animate-none'>
-        <div className="mx-4 text-center lg:text-4xl md:text-3xl text-xl font-bold hover:text-[#e9e9d4] cursor-pointer text-white animate-bounce ">Our Services makes customer Happy!</div>
-      </div>
 
-      <div className="sm:m-1 m-0 ">
-        <Box className="flex flex-wrap mt-6 md:mt-0">
-          {itemsList.map((items) => (
-            <Card className="w-full m-[2%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
-              <CardActionArea>
-                <div className="flex flex-col md:flex-row md:h-[30rem]">
-                  <div className="md:w-1/2 md:p-4 md:mb-2 lg:scale-95 mb-2 h-72 md:h-full">
-                    <CardMedia
-                      className=" w-full h-full rounded-b-md md:rounded"
-                      component={"img"}
-                      src={items.image}
-                      alt={items.name}
-                    />
-                  </div>
-                  <CardContent className={items.bg ? `${items.bg} rounded-md flex justify-evenly flex-col flex-1 h-72 md:h-auto` : "bg-indigo-200 rounded-md flex justify-evenly flex-col flex-1 h-72 md:h-auto"}>
-                    <div className={`flex flex-col text-black ${items.font}`}>
-                      <h3 className={`mt-4 md:mt-10 md:text-4xl font-bold`} >
-                        {items.name}
-                      </h3>
-                      <div className="flex font-bold capitalize">
-                        <LocationOn />{items.location}
-                      </div>
-                    </div>
-                    <p className="text-white md:text-2xl text-justify lg:text-3xl">{items.description}</p>
-                    <div className="font-bold text-lg my-2 md:my-4">This painting service is</div>
-                    <div className={`flex gap-4 ${items.font} font-semibold`}>
-                      <div className="flex gap-2 "><DoneAll/>Safe</div>
-                      <div className="flex gap-2"><FastForward/>Fast</div>
-                      <div className="flex gap-2"><Dashboard/>Customisable</div>
-                    </div>
-                    <div className="font-semibold whitespace-nowrap text-xl flex items-end md:gap-2 gap-1 md:mt-4">
-                      <div className="">Customer rating : {items.rating}</div>
-                      <div className="flex gap-1 my-auto text-yellow-500">
-                        <Rating name="read-only" value={items.rating} readOnly />
-                      </div>
-                    </div>
+//   return (
 
-                  </CardContent>
-                </div>
-              </CardActionArea>
-            </Card>
-          ))}
-        </Box>
-      </div>
-    </div>
-  );
-};
+//     <div className="">
+//       <div className='py-10 bg-gradient-to-tl from-[#ebc553f3] to-yellow-300 via-rose-500 text-center flex justify-center items-center hover:sm:animate-none'>
+//         <div className="mx-4 text-center lg:text-4xl md:text-3xl text-xl font-bold hover:text-[#e9e9d4] cursor-pointer text-white animate-bounce ">Our Services makes customer Happy!</div>
+//       </div>
 
-export default Services;
+//       <div className="sm:m-1 m-0 ">
+//         <Box className="flex flex-wrap mt-6 md:mt-0">
+//           {itemsList.map((items) => (
+//             <Card className="w-full m-[2%] md:mb-24 mb-12 drop-shadow-xl shadow-gray-600">
+//               <CardActionArea>
+//                 <div className="flex flex-col md:flex-row md:h-[30rem]">
+//                   <div className="md:w-1/2 md:p-4 md:mb-2 lg:scale-95 mb-2 h-72 md:h-full">
+//                     <CardMedia
+//                       className=" w-full h-full rounded-b-md md:rounded"
+//                       component={"img"}
+//                       src={items.image}
+//                       alt={items.name}
+//                     />
+//                   </div>
+//                   <CardContent className={items.bg ? `${items.bg} rounded-md flex justify-evenly flex-col flex-1 h-72 md:h-auto` : "bg-indigo-200 rounded-md flex justify-evenly flex-col flex-1 h-72 md:h-auto"}>
+//                     <div className={`flex flex-col text-black ${items.font}`}>
+//                       <h3 className={`mt-4 md:mt-10 md:text-4xl font-bold`} >
+//                         {items.name}
+//                       </h3>
+//                       <div className="flex font-bold capitalize">
+//                         <LocationOn />{items.location}
+//                       </div>
+//                     </div>
+//                     <p className="text-white md:text-2xl text-justify lg:text-3xl">{items.description}</p>
+//                     <div className="font-bold text-lg my-2 md:my-4">This painting service is</div>
+//                     <div className={`flex gap-4 ${items.font} font-semibold`}>
+//                       <div className="flex gap-2 "><DoneAll/>Safe</div>
+//                       <div className="flex gap-2"><FastForward/>Fast</div>
+//                       <div className="flex gap-2"><Dashboard/>Customisable</div>
+//                     </div>
+//                     <div className="font-semibold whitespace-nowrap text-xl flex items-end md:gap-2 gap-1 md:mt-4">
+//                       <div className="">Customer rating : {items.rating}</div>
+//                       <div className="flex gap-1 my-auto text-yellow-500">
+//                         <Rating name="read-only" value={items.rating} readOnly />
+//                       </div>
+//                     </div>
+
+//                   </CardContent>
+//                 </div>
+//               </CardActionArea>
+//             </Card>
+//           ))}
+//         </Box>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Services;
 
