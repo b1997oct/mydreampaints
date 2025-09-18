@@ -3,7 +3,7 @@ import roller from "@/assets/paint-roller.gif"
 import tree from "@/assets/tree.gif"
 import shield from "@/assets/shield.gif"
 import timer from "@/assets/timer.gif"
-import armchair from "@/assets/armchair.gif"
+import armchair from '@/assets/armchair.gif'
 import Heading from "./Heading"
 
 const featuresList = [

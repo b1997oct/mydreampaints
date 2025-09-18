@@ -10,6 +10,7 @@ import { Close, Facebook, Instagram, LocationOn, Mail, Phone, Pinterest, YouTube
 import { youtube, facebookPage, insagram, pinterest } from "../SocialLinks";
 import axios from "axios";
 import Snackbar from '@mui/material/Snackbar';
+import Image from "next/image";
 
 function Contact() {
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -260,7 +261,7 @@ export function Success() {
     <div>
       <div className="grid place-items-center py-20 ">
         <div className="mx-3 md:w-96 h-80 my-4">
-          <img src={congrats} alt="Application status" />
+          <Image src={congrats} alt="Application status" />
         </div>
         <div className="flex flex-col gap-4 ">
           <Button variant="contained" size="sm" className="bg-green-500 w-full truncate hover:shadow-lg hover:shadow-green-500" onClick={() => navigate("/contact")}>Submit one more form</Button>

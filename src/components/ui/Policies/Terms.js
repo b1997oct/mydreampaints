@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import logo from "../Assets/logo.png"
-import law from "../Assets/law.jpg"
+import logo from "../assets/logo.png"
+import law from "../assets/law.jpg"
+import Image from 'next/image'
 
 function Terms() {
 
@@ -17,7 +18,7 @@ function Terms() {
                     Terms and conditions</div>
                     </div>
                     <div className='relative  w-full z-[0]'>
-                    <img src={law} alt="terms-and-conditions" className='w-full h-full' />
+                    <Image src={law} alt="terms-and-conditions" className='w-full h-full' />
                     </div>
             </div>
 
@@ -37,7 +38,7 @@ function Terms() {
                     
                 </div>
                 <div className='w-[90vw] md:w-[40rem] h-full flex justify-center'>
-                    <img src={logo} alt="my-dream-paint-logo" className='w-full' />
+                    <Image src={logo} alt="my-dream-paint-logo" className='w-full' />
                 </div>
             </div>
 

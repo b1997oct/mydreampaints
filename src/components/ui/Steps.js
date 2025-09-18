@@ -6,8 +6,9 @@ import i4 from "@/assets/i4.png"
 import i5 from "@/assets/i5.png"
 import Heading from "./Heading"
 
+
 const stepsList = [
-    {
+    {   
         id: 1,
         image: i1,
         title: "On Time Completion",

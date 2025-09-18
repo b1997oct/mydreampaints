@@ -1,6 +1,4 @@
 import React from 'react'
-import Button from '../base/button'
-import Link from 'next/link'
 import pd1 from "@/assets/pd1.png"
 import pd2 from "@/assets/pd2.png"
 import pd3 from "@/assets/pd3.png"
