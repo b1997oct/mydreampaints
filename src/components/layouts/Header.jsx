@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../base/button'
-import logo from "@/assets/logo.png"
+import logo from "../../assets/logo.png"
 import Image from 'next/image'
 import Link from 'next/link'
 

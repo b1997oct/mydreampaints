@@ -1,8 +1,8 @@
 import React from 'react'
-import pd1 from "@/assets/pd1.png"
-import pd2 from "@/assets/pd2.png"
-import pd3 from "@/assets/pd3.png"
-import pd4 from "@/assets/pd4.png"
+import pd1 from "../../assets/pd1.png"
+import pd2 from "../../assets/pd2.png"
+import pd3 from "../../assets/pd3.png"
+import pd4 from "../../assets/pd4.png"
 import Image from 'next/image'
 
 

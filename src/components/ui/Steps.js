@@ -1,9 +1,9 @@
 import Image from "next/image"
-import i1 from "@/assets/i1.png"
-import i2 from "@/assets/i2.png"
-import i3 from "@/assets/i3.png"
-import i4 from "@/assets/i4.png"
-import i5 from "@/assets/i5.png"
+import i1 from "../../assets/i1.png"
+import i2 from "../../assets/i2.png"
+import i3 from "../../assets/i3.png"
+import i4 from "../../assets/i4.png"
+import i5 from "../../assets/i5.png"
 import Heading from "./Heading"
 
 
