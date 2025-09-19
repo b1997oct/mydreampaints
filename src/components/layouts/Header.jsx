@@ -7,7 +7,8 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Sheet, SheetContent, SheetTrigger } from '../base/sheet';
 import { Menu } from 'lucide-react';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 export const navLinks = [
@@ -27,6 +28,10 @@ export default function Header() {
     // close sidebar when route changes
     setOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
 
   return (

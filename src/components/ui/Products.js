@@ -26,6 +26,7 @@ export function Products() {
                 {productsList.map((product, idx) => (
                     <div
                         key={idx}
+                        data-aos="fade-in"
                         className="bg-white rounded-2xl 
           drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] 
           hover:drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)] 

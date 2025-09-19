@@ -43,6 +43,7 @@ export default function Perks() {
             <div className="flex flex-wrap justify-between bg-white mt-4 md:py-10">
                 {features.map((item, index) => (
                     <div
+                           data-aos="zoom-in"
                         key={index}
                         className={`flex p-2 md:p-0 justify-center flex-col gap-2 items-center md:gap-4 w-1/2 lg:w-auto 
             ${index === 0 ? "md:border-r-0 border-r-[1px] md:border-b-0 border-b-[1px] border-gray-400 text-center" : ""} 

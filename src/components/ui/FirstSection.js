@@ -10,8 +10,8 @@ export const FirstSection = ({ title, desp }) => {
         className={`absolute  inset-0 h-full w-full -z-10 object-cover`}
       />
       <div className='text-center text-white h-24'>
-        <h2 className='font-bold text-3xl md:text-4xl mb-2'>{title}</h2>
-        <h3>{desp}</h3>
+        <h2 data-aos="fade-up"  className='font-bold text-3xl md:text-4xl mb-2'>{title}</h2>
+        <h3 data-aos="fade-right" >{desp}</h3>
       </div>
       <ContactButtons />
     </div>

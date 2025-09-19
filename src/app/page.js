@@ -12,6 +12,34 @@ import { Steps } from '@/components/ui/Steps'
 import Link from 'next/link'
 import React from 'react'
 
+
+
+// app/page.js
+export const metadata = {
+  title: 'My Dream Paints | Trusted Painting Experts in India',
+  image: 'https://mydreampaints.com/logo192.png',
+  description: 'The Best Paint Service is a reliable painting company in India, providing professional internal and external painting solutions for houses, offices, and villas. We offer durable, beautiful, and long-lasting paint services with 900+ colors, washable distemper, and affordable prices.',
+  keywords: 'painting services, house painting, office painting, villa painting, interior painting, exterior painting, washable distemper, affordable paint, professional painters, My Dream Paints, Tumkur, Karnataka, India',
+  openGraph: {
+    title: 'My Dream Paints | Professional House & Office Painting Services in India',
+    description: 'Trusted painting experts providing high-quality interior and exterior painting solutions for homes and businesses. Explore our range of products and services.',
+    url: 'https://www.mydreampaints.com/',
+    images: [
+      {
+        url: 'https://www.mydreampaints.com/favicon.ico', // Using the favicon
+        alt: 'My Dream Paints company logo.',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'My Dream Paints | Professional House & Office Painting Services in India',
+    description: 'Trusted painting experts providing high-quality interior and exterior painting solutions for homes and businesses. Explore our range of products and services.',
+    images: ['https://www.mydreampaints.com/favicon.ico'], // Using the favicon
+  },
+};
+
+
 export default function Home() {
   return (
     <div>
@@ -22,7 +50,7 @@ export default function Home() {
         <div className="relative bg-gradient-to-tl from-orange-900/90 via-orange-700/70 to-transparent md:py-20 py-16">
           <div className="theme-container relative z-20 md:flex gap-12 justify-between items-center">
 
-            <div className="flex-1 px-4 md:px-0 mb-12 max-w-2xl text-white">
+            <div data-aos="fade-right" className="flex-1 px-4 md:px-0 mb-12 max-w-2xl text-white">
               <h1 className="text-center md:text-left text-4xl md:text-6xl font-extrabold leading-tight">
                 Trusted <span className="bg-gradient-to-r from-yellow-400 to-orange-300 bg-clip-text text-transparent">Painting Experts</span>
               </h1>
@@ -35,7 +63,7 @@ export default function Home() {
               <ContactButtons />
             </div>
 
-            <div className="flex-1 relative">
+            <div data-aos="fade-left" className="flex-1 relative">
               <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-4 md:p-8 border border-white/20">
                 <ContactForm />
               </div>

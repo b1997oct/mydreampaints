@@ -50,7 +50,7 @@ export const Steps = () => {
 
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {stepsList.map((step) => (
-                        <div key={step.id} className="group transition-all duration-300 hover:-translate-y-1 p-[2px] rounded-2xl  bg-gradient-to-r from-blue-400 via-green-400 to-orange-400">
+                        <div data-aos="zoom-in" key={step.id} className="group transition-all duration-300 hover:-translate-y-1 p-[2px] rounded-2xl  bg-gradient-to-r from-blue-400 via-green-400 to-orange-400">
                             <div className="relative h-full bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl ">
                                 <div className="flex justify-center">
                                     <div className="relative flex items-center justify-center">

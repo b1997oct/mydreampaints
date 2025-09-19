@@ -2,6 +2,32 @@ import { ContactInfoForm } from '@/components/ui/ContactInfoForm'
 import { FirstSection } from '@/components/ui/FirstSection'
 import React from 'react'
 
+// app/contact/page.js
+export const metadata = {
+  title: 'Contact My Dream Paints | Free Painting Consultation',
+  image: 'https://mydreampaints.com/logo192.png',
+  description: 'Get in touch with My Dream Paints for professional painting services in India. Contact us via phone, WhatsApp, or our online form for a free consultation and project quote.',
+  keywords: 'contact painting company, My Dream Paints contact, painting consultation, painting quote, call painter, WhatsApp painter, Tumkur painters, painting company in Karnataka',
+  openGraph: {
+    title: 'Get Your Painting Quote | Contact My Dream Paints',
+    description: 'Ready to transform your space? Contact our team of painting experts for a free consultation. Find our phone number, WhatsApp, email, and location here.',
+    url: 'https://www.mydreampaints.com/contact',
+    images: [
+      {
+        url: 'https://www.mydreampaints.com/favicon.ico', // Using the favicon
+        alt: 'My Dream Paints company logo.',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Get Your Painting Quote | Contact My Dream Paints',
+    description: 'Ready to transform your space? Contact our team of painting experts for a free consultation. Find our phone number, WhatsApp, email, and location here.',
+    images: ['https://www.mydreampaints.com/favicon.ico'], // Using the favicon
+  },
+};
+
+
 export default function Page() {
   return (
     <div>

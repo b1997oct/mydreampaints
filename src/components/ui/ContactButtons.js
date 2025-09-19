@@ -8,12 +8,12 @@ export const ContactButtons = () => {
     return (
         <div className='theme-container'>
             <div className="flex flex-col mx-auto md:flex-row gap-4 mt-10 max-w-sm">
-                <Link href={"tel:9482658028"} className='w-full'>
+                <Link data-aos="fade-right"  href={"tel:9482658028"} className='w-full'>
                     <Button color={"blue"} className="w-full">
                         Call
                     </Button>
                 </Link>
-                <Link target="_blank" className='w-full' href="https://wa.me/message/ASOK2XATB4ENJ1?text=Hi i came across your website. can i get more information about your product and service">
+                <Link data-aos="fade-left"  target="_blank" className='w-full' href="https://wa.me/message/ASOK2XATB4ENJ1?text=Hi i came across your website. can i get more information about your product and service">
                     <Button color={"green"} className="w-full">
                         WhatsApp
                     </Button>

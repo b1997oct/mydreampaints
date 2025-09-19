@@ -6,6 +6,32 @@ import { FirstSection } from '@/components/ui/FirstSection'
 import React from 'react'
 
 
+// app/about/page.js
+export const metadata = {
+  title: 'About My Dream Paints | Our Approach & Commitment',
+  image: 'https://mydreampaints.com/logo192.png',
+  description: 'Learn about My Dream Paints\' commitment to quality, on-time completion, and professional service. We are a reliable painting company in India with a customer-first approach and a team of professionally trained painters.',
+  keywords: 'about My Dream Paints, reliable painting company, professional painters, expert color consultancy, on-time project completion, hygienic painting process, safe painting services',
+  openGraph: {
+    title: 'About Us | The My Dream Paints Story',
+    description: 'Our mission is to transform your space with quality, durability, and style. Discover our unique approach to painting, including on-time completion and expert color consultancy.',
+    url: 'https://www.mydreampaints.com/about',
+    images: [
+      {
+        url: 'https://www.mydreampaints.com/favicon.ico', // Using the favicon
+        alt: 'My Dream Paints company logo.',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'About Us | The My Dream Paints Story',
+    description: 'Our mission is to transform your space with quality, durability, and style. Discover our unique approach to painting, including on-time completion and expert color consultancy.',
+    images: ['https://www.mydreampaints.com/favicon.ico'], // Using the favicon
+  },
+};
+
+
 export default function Page() {
 
   return (
