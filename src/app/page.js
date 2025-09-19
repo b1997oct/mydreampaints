@@ -4,10 +4,8 @@ import BgSlider from '@/components/ui/BgSlider'
 import { ContactButtons } from '@/components/ui/ContactButtons'
 import ContactForm from '@/components/ui/ContactForm'
 import { Customers } from '@/components/ui/Customers'
-import ExpertsCards from '@/components/ui/ExpertsCards'
 import Faq from '@/components/ui/Faq'
 import { Features } from '@/components/ui/Features'
-import Heading from '@/components/ui/Heading'
 import Perks from '@/components/ui/Perks'
 import { Products } from '@/components/ui/Products'
 import { Steps } from '@/components/ui/Steps'
@@ -61,10 +59,10 @@ export default function Home() {
       <Features />
 
 
-      <div className='theme-container py-24'>
+      {/* <div className='theme-container py-24'>
         <Heading className={"my-12"}>Our Services</Heading>
         <ExpertsCards />
-      </div>
+      </div> */}
 
       <section className='bg-orange-600 dark:bg-orange-800 py-24 px-4'>
         <div className='container mx-auto max-w-6xl'>
@@ -114,7 +112,6 @@ export default function Home() {
       </div>
 
 
-      <Heading className={"my-12"}>Our Customers</Heading>
 
       <Customers />
 

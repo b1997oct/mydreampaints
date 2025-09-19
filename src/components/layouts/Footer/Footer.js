@@ -3,14 +3,18 @@ import React from 'react'
 import { FaFacebook, FaGoogle, FaInstagram, FaLinkedin, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
 import "./footer.css"
 import { facebook, googleMap, insagram, linkedin, pinterest, twitter, youtube } from '../SocialLinks'
+import { navLinks } from '../Header'
+import Link from 'next/link'
+
+
 
 function Footer() {
   return (
 
     <footer className='pb-[4%]'>
 
-      <div className="md:flex justify-between theme-container">
-        <div className='m-2'>
+      <div className="flex gap-4 flex-col md:flex-row md:justify-between theme-container p-4 lg:p-0">
+        <div>
           <h4 className='mb-6 font-mono font-semibold text-xl'>Follow us on</h4>
           <ul className="md:flex">
             <div className='socials md:flex justify-evenly'>
@@ -26,16 +30,24 @@ function Footer() {
             </div>
           </ul>
           <br />
-          <div className='p-4'>Mathighatta, Tumkur, Karnataka - 572119</div>
         </div>
-        <div className=" items-center justify-center flex flex-col ">
-          <h2>Suport</h2>
-          <h2>24*7</h2>
+
+        <div>
+          <h2 className='underline mb-2'>Useful Links</h2>
+          <div className='flex flex-col'>
+            {navLinks.map((link) => (<Link key={link.href} href={link.href}>{link.label}</Link>))}
+          </div>
+        </div>
+
+
+        <div className="flex flex-col">
+          <h2 className='underline mb-2'>Support : 24*7</h2>
           <a href='mailto:mydreampaintsmgt@gmail.com' target="_blank" className='no-underline'>mydreampaintsmgt@gmail.com</a>
-          <p>+91 9482658028</p>
+          <a href='tel:9482658028'>+91 9482658028</a>
+          <div>Mathighatta, Tumkur, Karnataka - 572119</div>
         </div>
       </div>
-      
+
       <div className='theme-container text-center md:text-start border-t-2 border-t-gray-500 pt-4 mt-8'>
         Copyright © 2025, All rights reserved.
       </div>

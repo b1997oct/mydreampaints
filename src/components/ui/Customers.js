@@ -2,6 +2,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa"
 import Image from "next/image"
 import { customersList } from "@/archived-files/Components/Services/data/data"
 import { cn } from "@/lib/utils"
+import Heading from "./Heading"
 
 const Rating = ({ value }) => {
     const fullStars = Math.floor(value)
@@ -20,6 +21,8 @@ const Rating = ({ value }) => {
 export function Customers() {
     return (
         <div className="theme-container">
+            <Heading className={"my-12"}>Our Customers</Heading>
+
             <div className="flex md:flex-wrap overflow-auto md:overflow-visible justify-between gap-8 md:gap-16 py-10 px-4 md:px-0">
                 {customersList.map((customer, idx) => (
                     <div
