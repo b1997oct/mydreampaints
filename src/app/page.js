@@ -18,6 +18,7 @@ import React from 'react'
 export const metadata = {
   title: 'My Dream Paints | Trusted Painting Experts in India',
   image: 'https://mydreampaints.com/logo192.png',
+  siteMap: "https://mydreampaints.com/sitemap.xml",
   description: 'The Best Paint Service is a reliable painting company in India, providing professional internal and external painting solutions for houses, offices, and villas. We offer durable, beautiful, and long-lasting paint services with 900+ colors, washable distemper, and affordable prices.',
   keywords: 'painting services, house painting, office painting, villa painting, interior painting, exterior painting, washable distemper, affordable paint, professional painters, My Dream Paints, Tumkur, Karnataka, India',
   openGraph: {

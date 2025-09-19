@@ -122,6 +122,10 @@
     }
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 input,
 textarea {

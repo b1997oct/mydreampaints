@@ -30,6 +30,7 @@ function Footer() {
             </div>
           </ul>
           <br />
+
         </div>
 
         <div>
@@ -46,6 +47,10 @@ function Footer() {
           <a href='tel:9482658028'>+91 9482658028</a>
           <div>Mathighatta, Tumkur, Karnataka - 572119</div>
         </div>
+      </div>
+
+      <div className='theme-container'>
+        <Link href={"/sitemap"} className='text-blue-500 underline'>Sitemap</Link>
       </div>
 
       <div className='theme-container text-center md:text-start border-t-2 border-t-gray-500 pt-4 mt-8'>
