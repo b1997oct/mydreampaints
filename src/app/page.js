@@ -9,6 +9,7 @@ import { Features } from '@/components/ui/Features'
 import Perks from '@/components/ui/Perks'
 import { Products } from '@/components/ui/Products'
 import { Steps } from '@/components/ui/Steps'
+import { Tools } from '@/components/ui/Tools'
 import Link from 'next/link'
 import React from 'react'
 
@@ -139,9 +140,9 @@ export default function Home() {
           </Link>
         </div>
       </div>
+        <br/>
 
-
-
+<Tools/>
       <Customers />
 
       <Faq />
