@@ -131,9 +131,13 @@ export function getToolById(id) {
 
 // Helper function to get related tools (e.g., first 3, excluding the current one)
 export function getRelatedTools(currentId) {
+
+    const index = toolsData.findIndex(tool => tool.id === currentId);
+
+    const slicer = index > 3 ? [0, 3] : [3, toolsData.length]
     return toolsData
         .filter(tool => tool.id !== currentId)
-        .slice(0, 3);
+        .slice(...slicer);
 }
 
 export function getAllToolIds() {
