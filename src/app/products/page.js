@@ -1,6 +1,7 @@
 import { ContactInfoForm } from '@/components/ui/ContactInfoForm'
 import { FirstSection } from '@/components/ui/FirstSection'
 import { Products } from '@/components/ui/Products'
+import { Tools } from '@/components/ui/Tools';
 import React from 'react'
 
 
@@ -40,6 +41,7 @@ export default function Page() {
 
       <Products />
       <ContactInfoForm />
+      <Tools />
 
     </div>
   )
