@@ -4,7 +4,7 @@ import { getAllToolIds, getToolById, getRelatedTools } from '@/components/ui/Too
 
 
 export async function generateMetadata({ params }) {
-    const { id } = params;
+    const { id } = await params;
     const tool = getToolById(id);
 
     if (!tool) {
@@ -34,9 +34,9 @@ export async function generateStaticParams() {
 
 
 // --- 3. React Component (Tailwind Layout) ---
-export default function ToolDetailPage({ params }) {
+export default async function ToolDetailPage({ params }) {
 
-    const { id } = params
+    const { id } = await params
     const currentTool = getToolById(id);
 
     // Safety check just in case, though getStaticProps should handle 404
@@ -44,8 +44,6 @@ export default function ToolDetailPage({ params }) {
 
 
     const relatedTools = getRelatedTools(currentTool.id);
-
-    const mainImage = currentTool.images[0];
 
 
     return (
@@ -60,7 +58,7 @@ export default function ToolDetailPage({ params }) {
                         <h1 className="text-4xl font-extrabold text-gray-900 mb-2">
                             {currentTool.tool_title}
                         </h1>
-                        <p className="text-xl text-indigo-600 font-medium">
+                        <p className="text-xl text-orange-500 font-medium">
                             {currentTool.short_desp}
                         </p>
                     </header>
@@ -130,7 +128,7 @@ export default function ToolDetailPage({ params }) {
                                 <Link
                                     key={tool.id}
                                     href={`/products/${tool.id}`}
-                                    className="block border border-gray-200 rounded-lg p-4 transition duration-300 hover:shadow-lg hover:border-indigo-400"
+                                    className="block border border-gray-200 rounded-lg p-4 transition duration-300 hover:shadow-lg hover:border-orange-500"
                                 >
                                     <div className="flex items-center space-x-4">
                                         <img

@@ -133,18 +133,18 @@ export function getToolById(id) {
 export function getRelatedTools(currentId) {
 
     const index = toolsData.findIndex(tool => tool.id === currentId);
-
     const slicer = index > 3 ? [0, 3] : [3, toolsData.length]
     return toolsData
         .filter(tool => tool.id !== currentId)
         .slice(...slicer);
+
 }
 
 export function getAllToolIds() {
     return toolsData.map(tool => ({ params: { id: tool.id } }));
 }
 
-export const Tools = () => {
+export const Tools = ({ homePage }) => {
 
 
     return (
@@ -153,7 +153,7 @@ export const Tools = () => {
 
             <div className="flex flex-wrap justify-between gap-6 md:pt-12 py-8 px-4 md:px-0">
 
-                {toolsData.map((tool, index) => {
+                {toolsData.slice(0, homePage ? 6 : toolsData.length).map((tool, index) => {
                     return (
                         <Link
                             href={`/products/${slug(tool.id)}`}

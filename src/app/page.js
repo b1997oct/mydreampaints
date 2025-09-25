@@ -140,9 +140,9 @@ export default function Home() {
           </Link>
         </div>
       </div>
-        <br/>
+      <br />
 
-<Tools/>
+      <Tools homePage />
       <Customers />
 
       <Faq />
