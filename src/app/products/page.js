@@ -34,7 +34,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div>
+    <main>
       <FirstSection
         title={"Products"}
       />
@@ -43,6 +43,6 @@ export default function Page() {
       <ContactInfoForm />
       <Tools />
 
-    </div>
+    </main>
   )
 }

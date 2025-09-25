@@ -13,7 +13,7 @@ import "aos/dist/aos.css";
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
+  { href: "/products", startsWith: "/products", label: "Products" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -22,6 +22,7 @@ export const navLinks = [
 export default function Header() {
 
   const pathname = usePathname();
+  
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -57,7 +58,7 @@ export default function Header() {
               href={link.href}
               className={cn(
                 "text-gray-600 hover:text-orange-600 hover:font-bold px-2 py-1 rounded-full",
-                pathname === link.href && "font-bold text-orange-600 bg-orange-100"
+                (link.startsWith && pathname.startsWith(link.startsWith) || pathname === link.href) && "font-bold text-orange-600 bg-orange-100"
               )}
             >
               {link.label}

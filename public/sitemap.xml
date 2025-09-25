@@ -9,13 +9,6 @@
    </url>
    
    <url>
-      <loc>https://www.mydreampaints.com/products</loc>
-      <lastmod>2025-09-19T19:21:40+05:30</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   
-   <url>
       <loc>https://www.mydreampaints.com/about</loc>
       <lastmod>2025-09-19T19:21:40+05:30</lastmod>
       <changefreq>weekly</changefreq>
@@ -28,5 +21,48 @@
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url>
+
+   <url>
+      <loc>https://www.mydreampaints.com/products</loc>
+      <lastmod>2025-09-19T19:21:40+05:30</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+        <loc>https://www.mydreampaints.com/products/general-purpose-painting-hand-gloves</loc>
+        <lastmod>2025-09-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.mydreampaints.com/products/industrial-rubber-solvent-gloves</loc>
+        <lastmod>2025-09-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.mydreampaints.com/products/pu-coated-finger-coat-precision-gloves</loc>
+        <lastmod>2025-09-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.mydreampaints.com/products/patty-blades-paint-spreading-tools</loc>
+        <lastmod>2025-09-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.mydreampaints.com/products/sandpaper-for-paint-preparation</loc>
+        <lastmod>2025-09-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.mydreampaints.com/products/steel-wool-for-finishing</loc>
+        <lastmod>2025-09-25</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.mydreampaints.com/products/spikes-brush-for-heavy-surface-preparation</loc>
+        <lastmod>2025-09-25</lastmod>
+        <priority>0.7</priority>
+    </url>
    
 </urlset>

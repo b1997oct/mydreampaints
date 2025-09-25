@@ -30,7 +30,7 @@ export default function ContactForm() {
 
 
     return (
-        <div className="w-full max-w-xl mx-auto rounded-xl shadow-lg bg-white px-6 md:px-12 py-12">
+        <div className="md:w-full md:max-w-xl rounded-xl shadow-lg bg-white px-6 md:px-12 py-12">
             <h2 className="text-3xl font-bold text-gray-900 text-center pb-8">
                 Connect with My Dream Paints
             </h2>

@@ -125,6 +125,7 @@ const toolsData = [
 ];
 
 
+console.log(toolsData.map(d=>d.id).join("\n"));
 export function getToolById(id) {
     return toolsData.find(tool => tool.id === id) || null;
 }
@@ -148,7 +149,7 @@ export const Tools = ({ homePage }) => {
 
 
     return (
-        <div className='theme-container'>
+        <div className='theme-container overflow-hidden'>
             <Heading>Painting Tools</Heading>
 
             <div className="flex flex-wrap justify-between gap-6 md:pt-12 py-8 px-4 md:px-0">
